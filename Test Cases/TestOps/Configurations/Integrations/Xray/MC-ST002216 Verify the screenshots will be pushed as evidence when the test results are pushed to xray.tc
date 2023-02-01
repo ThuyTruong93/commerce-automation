@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002216 Verify the screenshots will be pushed as evidence when the test results are pushed to xray</name>
-   <tag>story-test,xray,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>10b1c37f-a53e-48f7-80ec-ca4eee9f8dbe</testCaseGuid>
-</TestCaseEntity>

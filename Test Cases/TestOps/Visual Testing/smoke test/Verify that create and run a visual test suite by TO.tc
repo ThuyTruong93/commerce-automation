@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Verify that create and run a visual test suite by TO</name>
-   <tag>p1,story-test,ui,staging</tag>
-   <comment></comment>
-   <testCaseGuid>930376f5-5670-4105-8398-410c8f6fddaf</testCaseGuid>
-</TestCaseEntity>

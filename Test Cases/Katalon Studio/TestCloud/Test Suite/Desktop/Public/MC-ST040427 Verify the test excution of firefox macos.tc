@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040427 Verify the test excution of firefox macos</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>1cabdfff-95a3-49f0-b79b-219889e87488</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST040452 Verify test exec with sample script ios</name>
-   <tag>story-test,schedule-test-run,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>d3d0aff1-e59e-4cae-a48d-3ee5922f37dc</testCaseGuid>
-</TestCaseEntity>

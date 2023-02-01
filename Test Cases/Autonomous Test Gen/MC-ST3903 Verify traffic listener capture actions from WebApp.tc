@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST3903 Verify traffic listener capture actions from WebApp</name>
-   <tag>story-test</tag>
-   <comment></comment>
-   <testCaseGuid>9f5b8b2a-6db6-4dca-b1d6-49e191f5e89e</testCaseGuid>
-</TestCaseEntity>

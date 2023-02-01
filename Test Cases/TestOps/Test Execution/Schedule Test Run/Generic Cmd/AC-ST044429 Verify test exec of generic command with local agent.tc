@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST044429 Verify test exec of generic command with local agent</name>
-   <tag>story-test,schedule-test-run,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>e4c1705e-c06e-46ca-95be-bdf25190fcaf</testCaseGuid>
-</TestCaseEntity>

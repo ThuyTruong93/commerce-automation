@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002227 Verify automatically assign custom fields and tags from test schedule to test result</name>
-   <tag>story-test,test-results,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>36e9e2e1-2405-4a00-a829-e4303d3298e9</testCaseGuid>
-</TestCaseEntity>

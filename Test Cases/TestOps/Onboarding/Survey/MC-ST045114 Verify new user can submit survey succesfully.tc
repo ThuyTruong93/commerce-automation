@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST045114 Verify new user can submit survey succesfully</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>0847c3dd-e12e-4fb0-af96-69be8a679d9d</testCaseGuid>
-</TestCaseEntity>

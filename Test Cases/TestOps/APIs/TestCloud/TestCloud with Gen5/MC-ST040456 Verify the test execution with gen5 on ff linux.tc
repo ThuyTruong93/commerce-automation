@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040456 Verify the test execution with gen5 on ff linux</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>48f0c2d5-c6bf-49e1-881d-3aabc5df4523</testCaseGuid>
-</TestCaseEntity>

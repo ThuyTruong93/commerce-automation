@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST00222 Verify user can search, assign, unassign existing tags on test case detail</name>
-   <tag>story-test,test-cases,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>788d6585-2a69-4ff4-be95-756345b2c088</testCaseGuid>
-</TestCaseEntity>

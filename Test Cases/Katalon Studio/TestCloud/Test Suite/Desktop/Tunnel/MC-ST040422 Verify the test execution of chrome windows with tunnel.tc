@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040422 Verify the test execution of chrome windows with tunnel</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>89e6f456-c0ee-47dd-b89b-dec898cf5cef</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002236 Verify cfs-tags are assigned to running test after executing a test schedule</name>
-   <tag>story-test,test-runs,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>2c59c70d-cbc3-4e97-8939-be8b35c40199</testCaseGuid>
-</TestCaseEntity>

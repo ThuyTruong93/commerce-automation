@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST007259 Verify subscription ID in API to get info of TestCloud users</name>
-   <tag>story-test,subscription-management,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>15a3755d-1c16-4d8a-9e73-ef198334f6f5</testCaseGuid>
-</TestCaseEntity>

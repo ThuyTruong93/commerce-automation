@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002210 Verify the test run will be pushed to jira project of test schedule</name>
-   <tag>story-test,xray,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>fd0bd6aa-63be-4ecd-bc52-4cd0d4d47be6</testCaseGuid>
-</TestCaseEntity>

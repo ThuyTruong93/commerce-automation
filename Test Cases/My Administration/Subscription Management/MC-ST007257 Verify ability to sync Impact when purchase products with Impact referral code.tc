@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST007257 Verify ability to sync Impact when purchase products with Impact referral code</name>
-   <tag>story-test,subscription-management,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>fcf0e9c1-94f2-4f7d-a6f3-8db2560181dd</testCaseGuid>
-</TestCaseEntity>

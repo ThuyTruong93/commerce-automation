@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002235 Verify user can select the TS on test schedule immediately after setup sample SR</name>
-   <tag>story-test,script-repositories,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>0be11bf1-37dd-4757-bb0e-80084398d07f</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST40923 Verify upload katalon report by optional fields</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>424d0f83-d0de-4beb-b2c3-47bf54bc9562</testCaseGuid>
-</TestCaseEntity>

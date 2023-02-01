@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST044439 Verify test exec of tsc w. kubernetes</name>
-   <tag>story-test,schedule-test-run,ui,p3</tag>
-   <comment></comment>
-   <testCaseGuid>06e01b3c-b13a-488b-bfd5-ef8416b52e8a</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST005606 Verify upload images to VBC</name>
-   <tag>p1,story-test,visual-test</tag>
-   <comment></comment>
-   <testCaseGuid>90ede99f-b693-4f9e-8e3e-ad545a1a104b</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-FA01342 Verify gui and navigation</name>
-   <tag>fast-test,profile,ui</tag>
-   <comment></comment>
-   <testCaseGuid>e4c2ce15-5ff8-49d0-9b20-507d8cdf755a</testCaseGuid>
-</TestCaseEntity>

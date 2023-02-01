@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002234 Verify git data will be immediately fetched after setup sample SR</name>
-   <tag>story-test,script-repositories,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>4888d759-c577-4426-95f8-84a3d187ddf9</testCaseGuid>
-</TestCaseEntity>

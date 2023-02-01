@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002240 Verify cfs-tags taken from UI and running TR when assign on KRE, UI, running TR</name>
-   <tag>story-test,test-schedule,cfs-tags,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>822d7e48-50d1-4ba6-8746-9fe283e639b1</testCaseGuid>
-</TestCaseEntity>

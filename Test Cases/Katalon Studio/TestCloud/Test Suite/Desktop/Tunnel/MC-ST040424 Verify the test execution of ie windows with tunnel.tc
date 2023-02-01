@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040424 Verify the test execution of ie windows with tunnel</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>63c32ba6-be4c-4aee-9e1f-e0e94e394a3a</testCaseGuid>
-</TestCaseEntity>

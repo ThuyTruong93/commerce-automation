@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002231 Verify show TSs for the sample project when setting up the TC environment for the TSC</name>
-   <tag>story-test,test-schedule,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>0ce06168-2fa6-427b-8675-8a404d532d89</testCaseGuid>
-</TestCaseEntity>

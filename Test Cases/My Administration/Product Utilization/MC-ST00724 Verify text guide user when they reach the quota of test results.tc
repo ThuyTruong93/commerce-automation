@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST00724 Verify text guide user when they reach the quota of test results</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>247a880b-959a-4691-a524-d6f1e901ebe1</testCaseGuid>
-</TestCaseEntity>
