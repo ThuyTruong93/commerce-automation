@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>User would not upload image with conditions:
+1. have same name and same resolution
+2. Duplicated images already exists in system
+3. File too large
+4. the number of images > allowance</description>
+   <name>AC-ST39504 Verify validation for disqualified images</name>
+   <tag>story-test,p2</tag>
+   <comment></comment>
+   <testCaseGuid>9919fccc-490d-4e10-bc6f-83f52e1d1edc</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040432 Verify the test excution of edge chromium macos with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>4581ca0c-dbfe-41da-9b9b-30ff9c46efdc</testCaseGuid>
+</TestCaseEntity>

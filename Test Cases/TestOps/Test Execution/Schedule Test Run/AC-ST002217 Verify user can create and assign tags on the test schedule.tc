@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST002217 Verify user can create and assign tags on the test schedule</name>
+   <tag>story-test,test-schedule,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>aa25b4d6-4b0b-4d15-a788-9d1e3b2f1710</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>cca34975-ea33-4352-9915-3a7275675a10</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/TestOps/Test Execution/Schedule Test Run/AC-ST002217</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>cca34975-ea33-4352-9915-3a7275675a10</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>listTags</value>
+      <variableId>1ee0a16f-fb66-4201-9eb7-1f54dedda155</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'[&quot;Tag-00221201&quot;]'</defaultValue>
+      <description></description>
+      <id>1ee0a16f-fb66-4201-9eb7-1f54dedda155</id>
+      <masked>false</masked>
+      <name>listTags</name>
+   </variable>
+</TestCaseEntity>

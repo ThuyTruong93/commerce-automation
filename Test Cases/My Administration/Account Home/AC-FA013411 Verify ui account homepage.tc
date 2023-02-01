@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA013411 Verify ui account homepage</name>
+   <tag>fast-test,account-homepage,ui</tag>
+   <comment></comment>
+   <testCaseGuid>836d919b-8226-4c5c-a94d-73549d81b650</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e2c6330c-b7e4-4d7a-b18c-3ec817ae603e</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0166ac1f-bfc3-4bbd-a102-9877508370b4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4b353d91-dbcd-4a8e-a0d2-c674b03cfb70</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'pgialinh.iuetv+auto2546@gmail.com'</defaultValue>
+      <description></description>
+      <id>e2c6330c-b7e4-4d7a-b18c-3ec817ae603e</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'RfES2L809yyT69vCWLoDzQ=='</defaultValue>
+      <description></description>
+      <id>0166ac1f-bfc3-4bbd-a102-9877508370b4</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'1937790'</defaultValue>
+      <description></description>
+      <id>4b353d91-dbcd-4a8e-a0d2-c674b03cfb70</id>
+      <masked>false</masked>
+      <name>accountId</name>
+   </variable>
+</TestCaseEntity>

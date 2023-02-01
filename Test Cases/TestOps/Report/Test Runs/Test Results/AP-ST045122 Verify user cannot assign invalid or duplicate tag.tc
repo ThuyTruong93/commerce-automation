@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST045122 Verify user cannot assign invalid or duplicate tag</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c86f4cd8-da1a-4f06-a0fe-caad0713aa34</testCaseGuid>
+</TestCaseEntity>

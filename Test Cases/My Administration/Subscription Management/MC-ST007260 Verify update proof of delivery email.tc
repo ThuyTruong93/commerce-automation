@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST007260 Verify update proof of delivery email</name>
+   <tag>story-test,subscription-management,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>b809dded-2ec0-4988-9290-41f12c5cf1a5</testCaseGuid>
+</TestCaseEntity>

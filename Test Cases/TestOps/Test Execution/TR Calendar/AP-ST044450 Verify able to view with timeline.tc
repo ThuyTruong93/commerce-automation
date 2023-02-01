@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST044450 Verify able to view with timeline</name>
+   <tag>story-test,test-run-calendar,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>d8cb7a26-8f02-4c1f-9e43-a5af474c78df</testCaseGuid>
+</TestCaseEntity>

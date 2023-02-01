@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST002219 Verify user cannot assign duplicate tags on the test schedule</name>
+   <tag>story-test,test-schedule,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>55ee2587-c076-4390-97de-1c14adf76796</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>80e0d154-2041-4208-86e3-174a8698757f</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/TestOps/Test Execution/Schedule Test Run/AC-ST002219</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>80e0d154-2041-4208-86e3-174a8698757f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>listTags</value>
+      <variableId>115160e1-0776-4958-82ff-d10ecede2994</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Tag-002219'</defaultValue>
+      <description></description>
+      <id>115160e1-0776-4958-82ff-d10ecede2994</id>
+      <masked>false</masked>
+      <name>tag</name>
+   </variable>
+</TestCaseEntity>

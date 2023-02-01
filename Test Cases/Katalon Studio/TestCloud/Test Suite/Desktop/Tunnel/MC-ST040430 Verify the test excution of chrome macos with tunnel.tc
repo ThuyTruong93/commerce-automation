@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040430 Verify the test excution of chrome macos with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>ef74d520-75af-4d14-b5e7-f727cecaf2cc</testCaseGuid>
+</TestCaseEntity>

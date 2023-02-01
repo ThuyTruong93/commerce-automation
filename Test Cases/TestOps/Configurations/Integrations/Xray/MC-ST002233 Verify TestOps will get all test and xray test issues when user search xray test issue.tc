@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002233 Verify TestOps will get all test and xray test issues when user search xray test issue</name>
+   <tag>story-test,xray,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>cdbd87b8-38c0-45bf-a090-994a75b206b4</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST4091 Verify delete custom field successfully</name>
+   <tag>story-test,custom-fields,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>392fe006-0681-40fa-b1f9-9e2ba5ac6f17</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5d1e74c0-20f8-4299-82c8-f116c835fcc8</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>5d1e74c0-20f8-4299-82c8-f116c835fcc8</id>
+      <masked>false</masked>
+      <name>customFieldId</name>
+   </variable>
+</TestCaseEntity>

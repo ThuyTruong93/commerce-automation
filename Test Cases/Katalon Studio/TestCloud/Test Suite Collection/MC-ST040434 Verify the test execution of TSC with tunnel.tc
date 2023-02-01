@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040434 Verify the test execution of TSC with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>bc368ef8-bd94-4222-88f3-e836501528bf</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST02204 Verify delete of an application to testops</name>
+   <tag>story-test,application-repository,ui,p3</tag>
+   <comment></comment>
+   <testCaseGuid>8524b446-3895-472a-b434-7f36fc22d77e</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>bf1d65c2-3e7c-41d4-b8a2-119dc02a1963</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>bf1d65c2-3e7c-41d4-b8a2-119dc02a1963</id>
+      <masked>false</masked>
+      <name>deleteSuccessMsg</name>
+   </variable>
+</TestCaseEntity>

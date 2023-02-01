@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST044427 Verify the logs and reports after test runs with TestCloud</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>ebfb69ad-798b-43ef-8d1e-12ea69ea9c66</testCaseGuid>
+</TestCaseEntity>

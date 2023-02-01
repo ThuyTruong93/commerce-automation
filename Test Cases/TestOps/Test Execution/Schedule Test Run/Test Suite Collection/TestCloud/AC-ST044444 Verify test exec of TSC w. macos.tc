@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST044444 Verify test exec of TSC w. macos</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>2e726b1b-82bf-433e-832f-473ba9354d32</testCaseGuid>
+</TestCaseEntity>

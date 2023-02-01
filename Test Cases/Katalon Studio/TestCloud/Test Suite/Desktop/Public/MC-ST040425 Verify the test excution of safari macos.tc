@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040425 Verify the test excution of safari macos</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>cd910dda-5805-4fb8-92ff-a036ff60e74c</testCaseGuid>
+</TestCaseEntity>

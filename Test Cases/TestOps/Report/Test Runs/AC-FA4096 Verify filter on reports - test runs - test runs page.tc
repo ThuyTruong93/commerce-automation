@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA4096 Verify filter on reports - test runs - test runs page</name>
+   <tag>fast-test,filter,testRuns</tag>
+   <comment></comment>
+   <testCaseGuid>b6bcc60f-82f4-42a1-bfc4-5b2ce3b4f692</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-FE005605 Verify the generating the code successfully</name>
+   <tag>autonomous,application-under-test,feature-test,p1</tag>
+   <comment></comment>
+   <testCaseGuid>fca5864f-fe00-49a7-a61a-a01beda47a06</testCaseGuid>
+</TestCaseEntity>

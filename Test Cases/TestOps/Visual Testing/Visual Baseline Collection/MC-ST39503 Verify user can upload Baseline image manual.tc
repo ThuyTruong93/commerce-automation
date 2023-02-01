@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>User click upload image button
+User select multiple images to Upload 
+User click upload 
+-> Upload success</description>
+   <name>MC-ST39503 Verify user can upload Baseline image manual</name>
+   <tag>story-test,p1</tag>
+   <comment></comment>
+   <testCaseGuid>c8e6030f-15e2-470a-994a-1e69ba19aadf</testCaseGuid>
+</TestCaseEntity>

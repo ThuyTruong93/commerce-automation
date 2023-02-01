@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST005608 Verify default comparison method is applied</name>
+   <tag>p1,story-test,ui,visual-test</tag>
+   <comment></comment>
+   <testCaseGuid>f690fef5-5353-45c7-bf99-2323a2ce8e5f</testCaseGuid>
+</TestCaseEntity>

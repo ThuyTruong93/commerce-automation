@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST044426 Verify test exec of mobile browsers with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>f9c5f630-af19-41ad-907f-0ece9acb1b14</testCaseGuid>
+</TestCaseEntity>

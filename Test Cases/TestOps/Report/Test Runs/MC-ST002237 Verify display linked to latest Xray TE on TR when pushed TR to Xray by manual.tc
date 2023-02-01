@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002237 Verify display linked to latest Xray TE on TR when pushed TR to Xray by manual</name>
+   <tag>story-test,test-runs,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>7ee7e352-d0ae-4780-a6a9-2dd7fe6c3b46</testCaseGuid>
+</TestCaseEntity>

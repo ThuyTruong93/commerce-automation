@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST01344 Verify invite user successfully without license</name>
+   <tag>story-test,user-management,ui,p3</tag>
+   <comment></comment>
+   <testCaseGuid>296c94e1-c837-4608-80db-10c10101305b</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>f500ba13-8698-4bd8-8712-dfda7be45727</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Profile</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e2c6330c-b7e4-4d7a-b18c-3ec817ae603e</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0166ac1f-bfc3-4bbd-a102-9877508370b4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>bb866047-f0f8-4e4e-9569-82bb3d6bd8d4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2b5ba1e8-5ef1-4b88-9050-b35fb55cbce3</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>GlobalVariable.owner_mail</defaultValue>
+      <description></description>
+      <id>e2c6330c-b7e4-4d7a-b18c-3ec817ae603e</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>GlobalVariable.owner_pass</defaultValue>
+      <description></description>
+      <id>0166ac1f-bfc3-4bbd-a102-9877508370b4</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'Test invite user without license'</defaultValue>
+      <description></description>
+      <id>bb866047-f0f8-4e4e-9569-82bb3d6bd8d4</id>
+      <masked>false</masked>
+      <name>accountName</name>
+   </variable>
+   <variable>
+      <defaultValue>'pgialinh.iuetv+1@gmail.com, pgialinh.iuetv+2@gmail.com'</defaultValue>
+      <description></description>
+      <id>2b5ba1e8-5ef1-4b88-9050-b35fb55cbce3</id>
+      <masked>false</masked>
+      <name>emails</name>
+   </variable>
+</TestCaseEntity>
