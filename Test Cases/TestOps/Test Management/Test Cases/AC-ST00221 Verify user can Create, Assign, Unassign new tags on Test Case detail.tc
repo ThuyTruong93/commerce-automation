@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST00221 Verify user can create, assign, unassign new tags on test case detail</name>
+   <tag>story-test,test-cases,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>4160b9ed-0775-47cf-9688-6109510e2dd6</testCaseGuid>
+</TestCaseEntity>

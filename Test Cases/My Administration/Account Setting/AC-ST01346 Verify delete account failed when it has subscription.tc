@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST01346 Verify delete account failed when it has subscription</name>
+   <tag>story-test,account-setting,ui,p3</tag>
+   <comment></comment>
+   <testCaseGuid>c7c7a562-6a7f-4fd3-a9fa-ee8e4ac54f4c</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>47f5d5be-c847-4ce6-a832-41a0e89cce01</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4fa72587-cba3-4ca6-b804-18d17911cf5f</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>baef22ad-8429-4230-9934-dce0f40594e5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'truongbaothuy93+177@gmail.com'</defaultValue>
+      <description></description>
+      <id>47f5d5be-c847-4ce6-a832-41a0e89cce01</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'KzXoJXJYxul3D9DRe4bCdA=='</defaultValue>
+      <description></description>
+      <id>4fa72587-cba3-4ca6-b804-18d17911cf5f</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'1937715'</defaultValue>
+      <description></description>
+      <id>baef22ad-8429-4230-9934-dce0f40594e5</id>
+      <masked>false</masked>
+      <name>accountId</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002242 Verify cfs-tags taken from KRE when delete all cfs-tag on running TR</name>
+   <tag>story-test,test-runs,cfs-tags,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>d2fd1464-7a29-4f9e-bbe9-6d8dc786d68c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>ATG: autonomous test generation</description>
+   <name>AP-ST Verify navigate to ATG page success</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>280d6b10-fbc0-44c5-be1a-76926a8bb1e4</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST045197601 Verify can assign custom fields on test run</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>080b1fb7-fd17-4809-867f-25b64e1f452e</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>1c5f6522-2807-4647-a90b-f005b6eaa01f</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/TestOps/Report/Test Runs/AC-ST045197601</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>1c5f6522-2807-4647-a90b-f005b6eaa01f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>listCustomFieldKeys</value>
+      <variableId>6852a8c2-a647-4675-b587-30311f5e13e4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>1c5f6522-2807-4647-a90b-f005b6eaa01f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>testRun</value>
+      <variableId>37fa452f-80fc-4d28-8cec-6c4b89dea7d7</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>1c5f6522-2807-4647-a90b-f005b6eaa01f</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>testSuite</value>
+      <variableId>27a760f1-5fa9-40f2-acd2-542f544aff86</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'[&quot;ACST40519760101&quot;]'</defaultValue>
+      <description></description>
+      <id>6852a8c2-a647-4675-b587-30311f5e13e4</id>
+      <masked>false</masked>
+      <name>listCustomFieldKeys</name>
+   </variable>
+   <variable>
+      <defaultValue>'AC-ST045197601-01'</defaultValue>
+      <description></description>
+      <id>37fa452f-80fc-4d28-8cec-6c4b89dea7d7</id>
+      <masked>false</masked>
+      <name>testRun</name>
+   </variable>
+   <variable>
+      <defaultValue>'AC-ST045197601-01'</defaultValue>
+      <description></description>
+      <id>27a760f1-5fa9-40f2-acd2-542f544aff86</id>
+      <masked>false</masked>
+      <name>testSuite</name>
+   </variable>
+</TestCaseEntity>

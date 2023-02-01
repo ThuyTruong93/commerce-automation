@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002225 Verify the custom fields and tags of test runs are not affected</name>
+   <tag>story-test,test-runs,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>fdafa395-eba0-437c-bd5f-d4137eb986fb</testCaseGuid>
+</TestCaseEntity>

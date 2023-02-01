@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002232 Verify TestOps can detect the xray test issue type from xray and return results</name>
+   <tag>story-test,xray,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>863ea0f4-84c9-4fe9-a6af-dafd006375ad</testCaseGuid>
+</TestCaseEntity>

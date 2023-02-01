@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-FA0451130102 Verify test result can push to Xray succesffuly</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c803d0f1-5d68-48f1-95f1-ac71a42b0e8c</testCaseGuid>
+</TestCaseEntity>

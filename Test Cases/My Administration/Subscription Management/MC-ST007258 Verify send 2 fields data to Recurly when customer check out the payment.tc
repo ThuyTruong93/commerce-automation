@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST007258 Verify send 2 fields data to Recurly when customer check out the payment</name>
+   <tag>story-test,subscription-management,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>d5552fba-927f-4824-bbb9-d0bab66a0027</testCaseGuid>
+</TestCaseEntity>

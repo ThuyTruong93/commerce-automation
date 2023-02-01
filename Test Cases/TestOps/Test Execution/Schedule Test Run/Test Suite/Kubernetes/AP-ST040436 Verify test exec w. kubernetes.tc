@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST040436 Verify test exec w. kubernetes</name>
+   <tag>story-test,schedule-test-run,ui,p3</tag>
+   <comment></comment>
+   <testCaseGuid>d240fe80-1643-4845-8101-e20965161068</testCaseGuid>
+</TestCaseEntity>

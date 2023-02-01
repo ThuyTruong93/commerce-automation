@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST01343 Verify change project name successfully</name>
+   <tag>story-test,project-management,ui,p4</tag>
+   <comment></comment>
+   <testCaseGuid>9ae0f3bf-b7b7-4eca-85ab-9ffb427c3887</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>29c8d28e-fd20-4609-bbe3-adb9bf294def</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>054bede9-e626-4e80-a6a2-c067f4258255</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>18847d3d-bc46-4291-9d52-d44772f7275b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>81799ad7-ff6e-4321-a0dc-0c02185a0f58</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'new project name'</defaultValue>
+      <description></description>
+      <id>29c8d28e-fd20-4609-bbe3-adb9bf294def</id>
+      <masked>false</masked>
+      <name>projectName</name>
+   </variable>
+   <variable>
+      <defaultValue>'pgialinh.iuetv+2@gmail.com'</defaultValue>
+      <description></description>
+      <id>054bede9-e626-4e80-a6a2-c067f4258255</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>'RfES2L809yyT69vCWLoDzQ=='</defaultValue>
+      <description></description>
+      <id>18847d3d-bc46-4291-9d52-d44772f7275b</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+   <variable>
+      <defaultValue>'1937696'</defaultValue>
+      <description></description>
+      <id>81799ad7-ff6e-4321-a0dc-0c02185a0f58</id>
+      <masked>false</masked>
+      <name>accountId</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST040451 Verify test exec with sample script android</name>
+   <tag>story-test,schedule-test-run,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>a60719b2-baba-4c3a-b371-d957aef38f7c</testCaseGuid>
+</TestCaseEntity>

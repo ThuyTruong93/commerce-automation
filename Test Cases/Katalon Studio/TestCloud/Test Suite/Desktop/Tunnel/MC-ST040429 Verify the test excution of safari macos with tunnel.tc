@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040429 Verify the test excution of safari macos with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>dd6b5911-65ea-466b-9a99-d6f9e3543a30</testCaseGuid>
+</TestCaseEntity>

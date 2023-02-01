@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST02203 Verify the uploads of an application to testops</name>
+   <tag>story-test,application-repository,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>4e31307d-889b-4abf-afa1-ce2e89d52f8f</testCaseGuid>
+</TestCaseEntity>

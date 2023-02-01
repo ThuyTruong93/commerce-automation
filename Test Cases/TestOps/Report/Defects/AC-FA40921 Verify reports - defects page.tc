@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-FA40921 Verify reports - defects page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>611af46c-cfd0-4208-9fad-e35f502e10da</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5e018ac4-10b6-4fc9-a2eb-47699d115eeb</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>5e018ac4-10b6-4fc9-a2eb-47699d115eeb</id>
+      <masked>false</masked>
+      <name>projectId</name>
+   </variable>
+</TestCaseEntity>

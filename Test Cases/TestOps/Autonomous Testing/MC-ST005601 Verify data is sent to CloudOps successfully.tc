@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST005601 Verify data is sent to CloudOps successfully</name>
+   <tag>autonomous,application-under-test,story-test,p1</tag>
+   <comment></comment>
+   <testCaseGuid>e731ae90-f7c3-421f-b20d-f41a2dfdfc06</testCaseGuid>
+</TestCaseEntity>

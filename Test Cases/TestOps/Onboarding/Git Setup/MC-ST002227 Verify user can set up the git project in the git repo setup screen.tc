@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST002227 Verify user can set up the git project in the git repo setup screen</name>
+   <tag>story-test,git-setup,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>7e503f97-299b-499f-bbb5-01185b75677f</testCaseGuid>
+</TestCaseEntity>

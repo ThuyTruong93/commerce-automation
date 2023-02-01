@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST005603 Verify that the large data is tracked successfully</name>
+   <tag>autonomous,application-under-test,story-test,p1</tag>
+   <comment></comment>
+   <testCaseGuid>0b0f53f5-162d-4e67-b711-2a3aa363e6fe</testCaseGuid>
+</TestCaseEntity>

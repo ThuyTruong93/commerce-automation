@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040415 Verify video recordings after a test run</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>55743bf7-8898-4069-b5d0-797e250d262d</testCaseGuid>
+</TestCaseEntity>

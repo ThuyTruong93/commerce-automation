@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST01341 Verify delete an account successfully</name>
+   <tag>story-test,account-setting,ui,p3</tag>
+   <comment></comment>
+   <testCaseGuid>eb3cf9bc-c138-481b-b1e4-5044db43c9cd</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e2b706c3-2666-455f-b957-bbabc58ee31d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'Test Delete Account'</defaultValue>
+      <description></description>
+      <id>e2b706c3-2666-455f-b957-bbabc58ee31d</id>
+      <masked>false</masked>
+      <name>account_name</name>
+   </variable>
+</TestCaseEntity>

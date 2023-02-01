@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040431 Verify the test excution of firefox macos with tunnel</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>836f9b2f-dfdb-47a7-aaca-9d3fa167ad51</testCaseGuid>
+</TestCaseEntity>

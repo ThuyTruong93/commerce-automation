@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST002212 Verify user can create and assign tags on test run detail</name>
+   <tag>story-test,test-runs,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>cb7f719e-526d-4347-a6c7-48699be43b5b</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>382702f2-450b-4102-8f88-528c4543281a</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/TestOps/Report/Test Runs/AC-ST002212</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>382702f2-450b-4102-8f88-528c4543281a</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>testRun</value>
+      <variableId>4b27824e-d4e8-47c9-8d14-6fd8edb46f18</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>382702f2-450b-4102-8f88-528c4543281a</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>testSuite</value>
+      <variableId>d0566887-abe7-4c22-b939-87184e03211f</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>382702f2-450b-4102-8f88-528c4543281a</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>listTags</value>
+      <variableId>140319fb-e2af-40bd-b562-4fc7fed8cfdb</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'AC-ST002212-01'</defaultValue>
+      <description></description>
+      <id>4b27824e-d4e8-47c9-8d14-6fd8edb46f18</id>
+      <masked>false</masked>
+      <name>testRun</name>
+   </variable>
+   <variable>
+      <defaultValue>'AC-ST002212-01'</defaultValue>
+      <description></description>
+      <id>d0566887-abe7-4c22-b939-87184e03211f</id>
+      <masked>false</masked>
+      <name>testSuite</name>
+   </variable>
+   <variable>
+      <defaultValue>'[&quot;Tag-00221201&quot;]'</defaultValue>
+      <description></description>
+      <id>140319fb-e2af-40bd-b562-4fc7fed8cfdb</id>
+      <masked>false</masked>
+      <name>listTags</name>
+   </variable>
+</TestCaseEntity>

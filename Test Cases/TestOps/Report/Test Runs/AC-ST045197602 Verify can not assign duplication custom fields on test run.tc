@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST045197602 Verify can not assign duplication custom fields on test run</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>be95ee50-6545-49ac-9d6a-942c1fd9269a</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f5d5bbf6-81ed-4e0f-9c59-6192cf782898</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>6d18bf89-d58b-4d7a-8a2a-e1de2003c409</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ab0ec9fa-d44f-4686-acbd-54ba7e0c28f3</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'ACST405197602'</defaultValue>
+      <description></description>
+      <id>f5d5bbf6-81ed-4e0f-9c59-6192cf782898</id>
+      <masked>false</masked>
+      <name>key</name>
+   </variable>
+   <variable>
+      <defaultValue>'AC-ST045197602'</defaultValue>
+      <description></description>
+      <id>6d18bf89-d58b-4d7a-8a2a-e1de2003c409</id>
+      <masked>false</masked>
+      <name>testRun</name>
+   </variable>
+   <variable>
+      <defaultValue>'AC-ST045197602'</defaultValue>
+      <description></description>
+      <id>ab0ec9fa-d44f-4686-acbd-54ba7e0c28f3</id>
+      <masked>false</masked>
+      <name>testSuite</name>
+   </variable>
+</TestCaseEntity>

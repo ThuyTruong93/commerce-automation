@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AC-ST4092 Verify create custom field successfully</name>
+   <tag>story-test,custom-fields,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>285d4bf5-882d-42cf-bbaa-4a8dac44a9c6</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>892e1cd2-9d01-42ef-a704-de00085e0492</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>892e1cd2-9d01-42ef-a704-de00085e0492</id>
+      <masked>false</masked>
+      <name>customFieldId</name>
+   </variable>
+</TestCaseEntity>

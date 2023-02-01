@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST040421 Verify the test execution of ie windows</name>
+   <tag>story-test,schedule-test-run,ui,p1</tag>
+   <comment></comment>
+   <testCaseGuid>a3e10698-82be-4d7c-a1db-c9c4104b92d0</testCaseGuid>
+</TestCaseEntity>

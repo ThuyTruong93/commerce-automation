@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST3902 Verify add, edit new AUT successfully</name>
+   <tag>story-test,ui</tag>
+   <comment></comment>
+   <testCaseGuid>b3cdf02f-c482-4125-abaf-d7497a1c488a</testCaseGuid>
+</TestCaseEntity>

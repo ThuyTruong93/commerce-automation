@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AP-ST044448 Verify able to view with week</name>
+   <tag>story-test,test-run-calendar,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>f2e39e90-225f-467c-84f3-186ec6d78f21</testCaseGuid>
+</TestCaseEntity>

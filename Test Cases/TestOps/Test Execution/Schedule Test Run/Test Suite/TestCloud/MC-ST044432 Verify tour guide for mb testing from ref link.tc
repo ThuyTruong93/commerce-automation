@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST044432 Verify tour guide for mb testing from ref link</name>
+   <tag>story-test,schedule-test-run,ui,p2</tag>
+   <comment></comment>
+   <testCaseGuid>c32efb1c-da16-4a90-93e7-01f43cd2829c</testCaseGuid>
+</TestCaseEntity>

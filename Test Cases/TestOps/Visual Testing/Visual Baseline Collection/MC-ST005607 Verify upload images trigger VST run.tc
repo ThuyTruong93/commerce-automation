@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MC-ST005607 Verify upload images trigger VST run</name>
+   <tag>p2,story-test,visual-test</tag>
+   <comment></comment>
+   <testCaseGuid>39f30717-9b51-4957-a982-12b6fc50ce7a</testCaseGuid>
+</TestCaseEntity>
