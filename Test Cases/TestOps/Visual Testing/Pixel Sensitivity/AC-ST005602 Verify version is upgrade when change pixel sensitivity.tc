@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Verify that vesion VBC is upgraded when change value pixel sensitivity/</description>
-   <name>AC-ST005602 Verify version is upgrade when change pixel sensitivity</name>
-   <tag>p1,story-test,visual-test</tag>
-   <comment></comment>
-   <testCaseGuid>f764edcc-d7a8-4c5d-b683-d4d9cfe6db67</testCaseGuid>
-</TestCaseEntity>

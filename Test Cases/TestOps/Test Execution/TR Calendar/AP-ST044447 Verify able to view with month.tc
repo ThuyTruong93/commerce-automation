@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST044447 Verify able to view with month</name>
-   <tag>story-test,test-run-calendar,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>fddc18a8-9870-446e-a1f8-9a8bdaf7b16f</testCaseGuid>
-</TestCaseEntity>

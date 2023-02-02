@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040419 Verify the test execution of chrome windows</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>5bd1525e-519c-4a3e-a029-108ff6198ffe</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002244 Verify creating a new Test Env in Xray when the env does not exist</name>
-   <tag>story-test,xray,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>cccc27f0-ede9-4f6c-bd63-1f3c88a05df5</testCaseGuid>
-</TestCaseEntity>

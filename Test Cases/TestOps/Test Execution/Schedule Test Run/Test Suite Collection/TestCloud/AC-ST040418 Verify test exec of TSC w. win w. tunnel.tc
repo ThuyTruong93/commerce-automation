@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST040418 Verify test exec of TSC w. win w. tunnel</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>a041660a-1576-419e-813c-fc52efe4ae43</testCaseGuid>
-</TestCaseEntity>

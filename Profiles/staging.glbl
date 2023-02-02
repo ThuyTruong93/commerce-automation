@@ -3,7 +3,7 @@
    <description></description>
    <name>staging</name>
    <tag></tag>
-   <defaultProfile>false</defaultProfile>
+   <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
       <initValue>40</initValue>
@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QEAutomationKatalon@gmail.com'</initValue>
+      <initValue>'thuy.truong@katalon.com'</initValue>
       <name>owner_mail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'VlZUbm6O36rsHucXakihkpTG4Gq0o9QN'</initValue>
+      <initValue>'KzXoJXJYxul3D9DRe4bCdA=='</initValue>
       <name>owner_pass</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

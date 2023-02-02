@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST005604 Verify diaglog show - Upload Images button disable</name>
-   <tag>p2,story-test,ui,visual-test</tag>
-   <comment></comment>
-   <testCaseGuid>0d363cc2-44c2-4041-aa7a-91171096cb8e</testCaseGuid>
-</TestCaseEntity>

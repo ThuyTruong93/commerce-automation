@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-FA005610 Verify Upload Images icon display and save changes not clicked</name>
-   <tag>story-test,visual-testing,ui</tag>
-   <comment></comment>
-   <testCaseGuid>2ddb7b2b-ae01-4912-9701-6e3aec21f9c5</testCaseGuid>
-</TestCaseEntity>

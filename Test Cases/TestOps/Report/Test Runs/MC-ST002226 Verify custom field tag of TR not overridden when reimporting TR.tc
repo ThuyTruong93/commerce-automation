@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002226 Verify custom field tag of TR not overridden when reimporting TR</name>
-   <tag>story-test,test-runs,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>c5c76648-875b-41b8-a7af-2c62080589bf</testCaseGuid>
-</TestCaseEntity>

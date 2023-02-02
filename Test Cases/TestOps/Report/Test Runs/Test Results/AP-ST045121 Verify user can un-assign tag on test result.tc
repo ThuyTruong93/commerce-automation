@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST045121 Verify user can un-assign tag on test result</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>8a1ae06b-a7e7-438b-916b-9de54837fa3c</testCaseGuid>
-</TestCaseEntity>

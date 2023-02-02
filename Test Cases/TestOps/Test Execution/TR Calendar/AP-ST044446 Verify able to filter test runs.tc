@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST044446 Verify able to filter test runs</name>
-   <tag>story-test,test-run-calendar,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>4daebdc8-3854-4cb4-8cca-38735ab596ef</testCaseGuid>
-</TestCaseEntity>

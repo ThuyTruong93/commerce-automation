@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002230 Verify custom fields and tags will inherit from test schedule when retry test result</name>
-   <tag>story-test,test-results,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>d736a27b-6294-484a-b384-36ae68b45b49</testCaseGuid>
-</TestCaseEntity>

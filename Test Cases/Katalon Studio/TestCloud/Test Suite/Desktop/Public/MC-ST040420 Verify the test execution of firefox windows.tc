@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040420 Verify the test execution of firefox windows</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>b7bcb6dc-f7be-4cf4-8a72-b54072928924</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST044449 Verify able to view with day</name>
-   <tag>story-test,test-run-calendar,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>4c37c747-82b5-4fdb-9c6e-95466309e0d5</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST045108 Verify test schedule jira release push as fix version to xray test execution</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>2b0ea43c-3fe3-4fd1-8799-044f81d556c0</testCaseGuid>
-</TestCaseEntity>

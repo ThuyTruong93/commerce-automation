@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-FA0451130101 Verify Push to Xray button is hidden if Xray integration has not been set up</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>94397b18-e701-46ef-83e4-c5fad09c65fd</testCaseGuid>
-</TestCaseEntity>

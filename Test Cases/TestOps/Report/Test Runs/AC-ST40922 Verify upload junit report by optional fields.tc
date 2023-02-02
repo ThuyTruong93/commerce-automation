@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST40922 Verify upload junit report by optional fields</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>e68e017f-dab6-488a-85b0-3d69caf696bd</testCaseGuid>
-</TestCaseEntity>

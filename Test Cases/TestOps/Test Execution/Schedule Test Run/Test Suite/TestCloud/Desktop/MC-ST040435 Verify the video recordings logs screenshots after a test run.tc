@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040435 Verify the video recordings logs screenshots after a test run</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>c774dcde-fe78-4714-8988-dd564725160c</testCaseGuid>
-</TestCaseEntity>

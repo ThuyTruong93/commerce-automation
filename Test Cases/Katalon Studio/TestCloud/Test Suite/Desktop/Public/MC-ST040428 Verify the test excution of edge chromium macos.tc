@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST040428 Verify the test excution of edge chromium macos</name>
-   <tag>story-test,schedule-test-run,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>a556cec7-f042-4a41-a93d-7e420e3cee37</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AC-ST044434 Verify test exec of generic command with circleci</name>
-   <tag>story-test,schedule-test-run,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>b6023981-9a1c-40ad-916c-e088d65c1f83</testCaseGuid>
-</TestCaseEntity>

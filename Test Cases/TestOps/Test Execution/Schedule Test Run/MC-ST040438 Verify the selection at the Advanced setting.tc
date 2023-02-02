@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>The advanced setting in the new UI of the Schedule Test Run popup</description>
-   <name>MC-ST040438 Verify the selection at the Advanced setting</name>
-   <tag>story-test, schedule-test-run, ui, p2</tag>
-   <comment></comment>
-   <testCaseGuid>95435ff7-02f8-4fe6-9d8e-8a3cc9152ed1</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002241 Verify cfs-tags taken from running TR when assign on UI, running TR</name>
-   <tag>story-test,test-runs,cfs-tags,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>fda13b0d-479e-4a59-92e6-bd5b9978a600</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST045123 Verify user can assign existing new tag on test result</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>1ae05104-e7cc-4769-b079-647b61802808</testCaseGuid>
-</TestCaseEntity>

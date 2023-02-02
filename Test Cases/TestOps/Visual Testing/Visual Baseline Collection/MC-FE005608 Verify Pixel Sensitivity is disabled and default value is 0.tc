@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>with standard user and VST Pro user is expired</description>
-   <name>MC-FE005608 Verify Pixel Sensitivity is disabled and default value is 0</name>
-   <tag>p4,ui,story-test,visual-test</tag>
-   <comment></comment>
-   <testCaseGuid>b76c8227-1548-4761-9404-a797d538633d</testCaseGuid>
-</TestCaseEntity>

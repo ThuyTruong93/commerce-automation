@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AP-ST044436 Verify test exec of generic command with kubernetes</name>
-   <tag>story-test,schedule-test-run,ui,p3</tag>
-   <comment></comment>
-   <testCaseGuid>f52eaf97-32f8-49be-ae6a-c9b338b70199</testCaseGuid>
-</TestCaseEntity>

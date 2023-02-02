@@ -35,12 +35,12 @@ public class AccountHomePage extends BasePage<AccountHomePage>  {
 		WebUI.click(id("admin.home.link.get.the.account.id"))
 		return this
 	}
-	
+
 	public AccountHomePage clickManageMyLicenses() {
 		WebUI.click(id("admin.home.link.manage.my.licenses"))
 		return this
 	}
-	
+
 	public AccountHomePage clickInviteUsersToAccount() {
 		WebUI.click(id("admin.home.link.invite.users.to.account"))
 		return this
@@ -74,8 +74,7 @@ public class AccountHomePage extends BasePage<AccountHomePage>  {
 	public AccountHomePage clickProfile() {
 		WebUI.click(text("View Profile"))
 		return this
-	}	
-	
+	}
 }
 
 

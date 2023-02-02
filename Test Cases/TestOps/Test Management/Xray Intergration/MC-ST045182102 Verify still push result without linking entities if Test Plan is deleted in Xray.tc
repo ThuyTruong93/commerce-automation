@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST045182102 Verify still push result without linking entities if Test Plan is deleted in Xray</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>6f1df2cf-fca6-4344-9c85-9b6be6fc28f6</testCaseGuid>
-</TestCaseEntity>

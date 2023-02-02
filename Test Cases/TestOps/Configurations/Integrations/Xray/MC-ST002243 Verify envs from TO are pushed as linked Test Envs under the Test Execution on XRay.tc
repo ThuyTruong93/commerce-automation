@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST002243 Verify envs from TO are pushed as linked Test Envs under the Test Execution on XRay</name>
-   <tag>story-test,xray,ui,p2</tag>
-   <comment></comment>
-   <testCaseGuid>ec69348e-aaf5-43a2-a1e4-83732813bb6b</testCaseGuid>
-</TestCaseEntity>

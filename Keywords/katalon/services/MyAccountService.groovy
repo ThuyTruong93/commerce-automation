@@ -19,7 +19,7 @@ public class MyAccountService extends BaseService<MyAccountService> {
 		println this.accountId
 		return this
 	}
-	
+
 	public MyAccountService setUrlWithAccountId(String accountId = this.accountId) {
 		setUrl(accountUrl + accountId)
 		return this
