@@ -11,6 +11,7 @@ String decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(password))
 'User login to get token '
 Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken()
 
-Page.nav(SubscriptionService).initRequestObject()
+Page.nav(SubscriptionService)
 							.createNewSubscription(accountId, planId, number)
+							.upgradeSubscription(accountId, planId, number)
 							
