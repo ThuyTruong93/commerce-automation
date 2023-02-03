@@ -14,4 +14,5 @@ Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken
 Page.nav(SubscriptionService)
 							.createNewSubscription(accountId, planId, number)
 							.upgradeSubscription(accountId, planId, number)
-							
+							.cancelSubscription()
+							.reactivateSubscription()

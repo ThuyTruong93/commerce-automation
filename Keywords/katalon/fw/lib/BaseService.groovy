@@ -104,6 +104,7 @@ public class BaseService <T> {
 		request.setHttpHeaderProperties(httpHeader)
 		request.setRestRequestMethod('PUT')
 		response = WS.sendRequest(request)
+		return this
 	}
 
 	def T sendDeleteRequest() {
