@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>MC-ST007262 Verify API grant licenses</name>
-   <tag>story-test,subscription-management,ui,p1</tag>
-   <comment></comment>
-   <testCaseGuid>ae131e81-f61e-4655-b543-0a7dbe45befd</testCaseGuid>
-</TestCaseEntity>
