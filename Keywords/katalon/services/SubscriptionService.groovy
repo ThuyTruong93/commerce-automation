@@ -54,7 +54,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		this.recurlyInvoiceNumber = parseResponseBodyToJsonObject().data[0].recurlyInvoiceNumber
 		this.nextBillingDate = parseResponseBodyToJsonObject().data[0].nextBillingDate
 		this.canceledAt = parseResponseBodyToJsonObject().data[0].canceledAt
-		println this.id
+		println "Id: " + this.id
 		println this.createdAt
 		println this.updatedAt
 		println this.archived

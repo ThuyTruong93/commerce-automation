@@ -1,4 +1,3 @@
-
 import com.kms.katalon.util.CryptoUtil
 
 import internal.GlobalVariable

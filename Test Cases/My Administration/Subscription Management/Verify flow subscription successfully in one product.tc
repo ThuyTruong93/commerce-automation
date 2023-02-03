@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify subscribe new subscription successfully</name>
+   <name>Verify flow subscription successfully in one product</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>47b49995-4699-44ef-b116-75ed20f23164</testCaseGuid>
