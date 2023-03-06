@@ -77,7 +77,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService createListNewSubscription(String accountId, String planId, String quantity) {
 		def dem =  planId.count(',')+1
-		//def accountID = accountId.toLong()
+		def accountID = accountId.toLong()
 		println dem
 		for (int i = 0; i < dem; i++) {
 			def planIdArray = planId.split(",").collect { it.trim() }
