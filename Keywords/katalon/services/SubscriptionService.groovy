@@ -10,13 +10,15 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String subscriptionUrl = "$GlobalVariable.myApi$GlobalVariable.version/subscriptions/checkout-testops-platform"
 	static String cancelSubscriptionUrl = "$GlobalVariable.myApi$GlobalVariable.version/subscriptions/cancel"
 	static String reactivateSubscriptionUrl = "$GlobalVariable.myApi$GlobalVariable.version/subscriptions/reactivate"
-	static String markPaidInvoiceSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"invoices/number-"
+	static String markPaidInvoiceSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"invoices/"
 	static String terminateSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
 	static String listActiveSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"accounts/code-organization-"
-	
-//	Number accountId;
-//	String planId;
-//	Number number;
+	static String subscriptionRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions"
+	static String subscriptionUpdateRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
+
+	//	Number accountId;
+	//	String planId;
+	//	Number number;
 
 	//respond subscription
 	Number id;
@@ -33,9 +35,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	String recurlyInvoiceNumber
 	Number nextBillingDate
 	Number canceledAt
-	
+
 	//respond array list subscription
-	def uuidArray = []
+    def uuidArray = []
 
 	public SubscriptionService listActiveSubscription(Number accountId) {
 		initRequestObject()
@@ -44,34 +46,19 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.setJsonContentTypeHeader()
 				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
 				.sendGetRequest()
-				
+
 		def lengthListActiveBody = parseResponseBodyToJsonObject().data.size()
-			for (int i = 0;i<lengthListActiveBody;i++) {
-				this.uuidArray << (parseResponseBodyToJsonObject().data[i].uuid)
-			}
-			println "uuidArray: $uuidArray"
-			
-		return this
-	}
-
-	public SubscriptionService createNewSubscription(Number accountId, String planId, Number number) {
-		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": number]
-		]
-		initRequestObject()
-				.setUrl(subscriptionUrl)
-				.setBearerAuthorizationHeader()
-				.setJsonContentTypeHeader()
-				.setPayLoad(parseObjectToString(body))
-				.sendPostRequest()
-				//.verifyStatusCode(200)
+		for (int i = 0;i<lengthListActiveBody;i++) {
+			this.uuidArray << (parseResponseBodyToJsonObject().data[i].uuid)
+		}
+		println "uuidArray: $uuidArray"
 
 		return this
 	}
-	
-	public SubscriptionService createListNewSubscription(Number accountId, List<String> planId, List<Number> number) {
+
+	public SubscriptionService createNewSubscription(Number accountId, String planId, Number quantity) {
 		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": number]
+			[ "organizationId": accountId,"planId": planId, "number": quantity]
 		]
 		initRequestObject()
 				.setUrl(subscriptionUrl)
@@ -84,9 +71,33 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService markPaidInvoiceSubscription(String invoiceNumber) {
+	public SubscriptionService createListNewSubscription(Number accountId, String planId, Number quantity) {
+		def dem =  planId.count(',')  + 1
+		println dem
+		for (int i = 0; i < dem; i++) {
+			def planIdArray = planId.split(",").collect { it.trim() }
+			def quantityArray = quantity.split(",").collect { it.trim() }
+			println planIdArray
+			println quantityArray
+		
+		def body = [
+			[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
+		]
 		initRequestObject()
-				.setUrl(markPaidInvoiceSubscriptionUrl+invoiceNumber+"/mark_successful")
+				.setUrl(subscriptionUrl)
+				.setBearerAuthorizationHeader()
+				.setJsonContentTypeHeader()
+				.setPayLoad(parseObjectToString(body))
+				.sendPostRequest()
+				.verifyStatusCode(200)
+		}
+		return this	
+	}
+
+
+	public SubscriptionService markPaidInvoiceSubscriptionByInvoiceNumber(String invoiceNumber) {
+		initRequestObject()
+				.setUrl(markPaidInvoiceSubscriptionUrl+"number-$invoiceNumber"+"/mark_successful")
 				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
 				.setJsonContentTypeHeader()
 				.setContentLengthHeader('0')
@@ -96,10 +107,22 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService upgradeSubscription(Number accountId,String planId,Number number, String recurlySubscriptionUuid) {
-		def numberupgrade = number + 1
+	public SubscriptionService markPaidInvoiceSubscriptionByInvoiceId(String invoiceId) {
+		initRequestObject()
+				.setUrl(markPaidInvoiceSubscriptionUrl+"$invoiceId"+"/mark_successful")
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setContentLengthHeader('0')
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.sendPutRequest()
+				.verifyStatusCode(200)
+		return this
+	}
+
+	public SubscriptionService upgradeSubscription(Number accountId,String planId,Number quantity, String recurlySubscriptionUuid) {
+		def quantityUpgrade = quantity + 1
 		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": numberupgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]
+			[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]
 		]
 
 		initRequestObject()
@@ -146,24 +169,24 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.verifyStatusCode(200)
 		return this
 	}
-	
+
 	public SubscriptionService terminateListSubscription() {
-		
+
 		for (int i = 0 ; i< uuidArray.size(); i++) {
 			def uuid = uuidArray[i]
-		println "uuid = $uuid"
-		
-		initRequestObject()
-				.setUrl(terminateSubscriptionUrl+uuid+"?refund=none&charge=true")
-				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-				.setJsonContentTypeHeader()
-				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-				.sendDeleteRequest()	
+			println "uuid = $uuid"
+
+			initRequestObject()
+					.setUrl(terminateSubscriptionUrl+uuid+"?refund=none&charge=true")
+					.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+					.setJsonContentTypeHeader()
+					.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+					.sendDeleteRequest()
 		}
 		WebUI.delay(5)
 		return this
 	}
-	
+
 	public updateSubscriptionJson(Object result) {
 		this.id = result.id
 		this.createdAt = result.createdAt
@@ -179,6 +202,60 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		this.recurlyInvoiceNumber = result.recurlyInvoiceNumber
 		this.nextBillingDate = result.nextBillingDate
 		this.canceledAt = result.canceledAt
-	}	
+	}
+
+	//Subscription on Recurly
+
+	public SubscriptionService createNewSubscriptionRecurly(Number accountId, String planId, Number quantity) {
+		def body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+			"quantity": quantity]
+
+		initRequestObject()
+				.setUrl(subscriptionRecurlyUrl)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPostRequest()
+				.verifyStatusCode(201)
+
+		return this
+	}
+
+	public SubscriptionService updateNextBillingDate(String nextBillingDate, String recurlySubscriptionUuid) {
+		def body = ["next_bill_date": nextBillingDate]
+		
+		initRequestObject()
+				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPutRequest()
+				.verifyStatusCode(200)
+
+		return this
+	}
+	
+	public SubscriptionService updateNextBillingDateList(String nextBillingDate) {
+		def body = ["next_bill_date": nextBillingDate]
+		
+		//handle case array uuid
+		for (int i = 0;i< uuidArray.size();i++) {
+				def recurlySubscriptionUuid = uuidArray[i]
+				println "$recurlySubscriptionUuid"
+
+		initRequestObject()
+				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPutRequest()
+				.verifyStatusCode(200)
+		}
+
+		return this
+	}		
 
 }

@@ -5,6 +5,15 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b429ffb5-df0a-4cf9-9063-ffbe9a56a11d</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>6a4fe2de-d9e6-491d-a211-47fe44b412dc</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/My Administration/Subscription Management/Array Subscription</testDataId>
+   </testDataLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
@@ -18,9 +27,9 @@
       <variableId>51c8e122-77f6-423a-9833-296bd22e31cd</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
+      <testDataLinkId>6a4fe2de-d9e6-491d-a211-47fe44b412dc</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>accountID</value>
       <variableId>07991461-6214-49d7-bfc9-da98538b6e97</variableId>
    </variableLinks>
    <variableLinks>
@@ -50,14 +59,14 @@
       <name>password</name>
    </variable>
    <variable>
-      <defaultValue>1940191</defaultValue>
+      <defaultValue>192805</defaultValue>
       <description></description>
       <id>07991461-6214-49d7-bfc9-da98538b6e97</id>
       <masked>false</masked>
       <name>accountId</name>
    </variable>
    <variable>
-      <defaultValue>'kse_per-user_annual'</defaultValue>
+      <defaultValue>'kse_per-user_annual,kre_floating_annual'</defaultValue>
       <description></description>
       <id>26d64be2-ce7e-4dba-9e56-3b74479b0366</id>
       <masked>false</masked>
@@ -68,6 +77,6 @@
       <description></description>
       <id>3c808e46-e300-4dee-8903-c76652c24a43</id>
       <masked>false</masked>
-      <name>number</name>
+      <name>quantity</name>
    </variable>
 </TestCaseEntity>

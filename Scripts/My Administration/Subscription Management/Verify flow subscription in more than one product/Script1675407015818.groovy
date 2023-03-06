@@ -12,14 +12,14 @@ Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken
 Page.nav(SubscriptionService).listActiveSubscription(accountId)
 							 .terminateListSubscription()						 
 							 
-def subscriptionBody = Page.nav(SubscriptionService).createNewSubscription(accountId, planId, number).parseResponseBodyToJsonObject().data[0]
+Page.nav(SubscriptionService).createListNewSubscription(accountId, planId, quantity)
 
-Page.nav(SubscriptionService).markPaidInvoiceSubscription(subscriptionBody.recurlyInvoiceNumber)
-
-def subscriptionBodyUpgrade = Page.nav(SubscriptionService)
-									.upgradeSubscription(accountId, planId, number, subscriptionBody.recurlySubscriptionUuid)
-									.parseResponseBodyToJsonObject().data[0]
-									
-Page.nav(SubscriptionService).markPaidInvoiceSubscription(subscriptionBodyUpgrade.recurlyInvoiceNumber)
-							.cancelSubscription(subscriptionBodyUpgrade)
-							.reactivateSubscription(subscriptionBodyUpgrade)
+//Page.nav(SubscriptionService).markPaidInvoiceSubscriptionByInvoiceNumber(subscriptionBody.recurlyInvoiceNumber)
+//
+//def subscriptionBodyUpgrade = Page.nav(SubscriptionService)
+//									.upgradeSubscription(accountId, planId, quantity, subscriptionBody.recurlySubscriptionUuid)
+//									.parseResponseBodyToJsonObject().data[0]
+//									
+//Page.nav(SubscriptionService).markPaidInvoiceSubscriptionByInvoiceNumber(subscriptionBodyUpgrade.recurlyInvoiceNumber)
+//							.cancelSubscription(subscriptionBodyUpgrade)
+//							.reactivateSubscription(subscriptionBodyUpgrade)

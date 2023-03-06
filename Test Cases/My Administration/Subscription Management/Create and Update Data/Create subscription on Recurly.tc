@@ -1,73 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify flow subscription successfully in one product</name>
+   <name>Create subscription on Recurly</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>47b49995-4699-44ef-b116-75ed20f23164</testCaseGuid>
+   <testCaseGuid>6d3e330c-177c-47f4-8253-b4afb5d64a1a</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>cb9ea897-fa9b-4d7d-8193-8933da8d51da</variableId>
+      <variableId>5fdcfb6e-682e-43cd-811b-fc399a8391d0</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>ec7db414-5c8f-4bc5-a166-b21dba3e9448</variableId>
+      <variableId>51c8e122-77f6-423a-9833-296bd22e31cd</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>2147ed81-2d94-45ff-9ea7-92176e745797</variableId>
+      <variableId>07991461-6214-49d7-bfc9-da98538b6e97</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>b2b421ea-4b82-4c94-b90a-0ff627bf28e6</variableId>
+      <variableId>26d64be2-ce7e-4dba-9e56-3b74479b0366</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>201b1599-8ca9-4318-bc2a-9d432997e74b</variableId>
+      <variableId>3c808e46-e300-4dee-8903-c76652c24a43</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b28f71ad-31f6-4425-a5a2-ed3da8a7b493</variableId>
    </variableLinks>
    <variable>
       <defaultValue>'thuy.truong@katalon.com'</defaultValue>
       <description></description>
-      <id>cb9ea897-fa9b-4d7d-8193-8933da8d51da</id>
+      <id>5fdcfb6e-682e-43cd-811b-fc399a8391d0</id>
       <masked>false</masked>
       <name>email</name>
    </variable>
    <variable>
       <defaultValue>'KzXoJXJYxul3D9DRe4bCdA=='</defaultValue>
       <description></description>
-      <id>ec7db414-5c8f-4bc5-a166-b21dba3e9448</id>
+      <id>51c8e122-77f6-423a-9833-296bd22e31cd</id>
       <masked>false</masked>
       <name>password</name>
    </variable>
    <variable>
-      <defaultValue>1939937</defaultValue>
+      <defaultValue>192805</defaultValue>
       <description></description>
-      <id>2147ed81-2d94-45ff-9ea7-92176e745797</id>
+      <id>07991461-6214-49d7-bfc9-da98538b6e97</id>
       <masked>false</masked>
       <name>accountId</name>
    </variable>
    <variable>
       <defaultValue>'kse_per-user_annual'</defaultValue>
       <description></description>
-      <id>b2b421ea-4b82-4c94-b90a-0ff627bf28e6</id>
+      <id>26d64be2-ce7e-4dba-9e56-3b74479b0366</id>
       <masked>false</masked>
       <name>planId</name>
    </variable>
    <variable>
       <defaultValue>3</defaultValue>
       <description></description>
-      <id>201b1599-8ca9-4318-bc2a-9d432997e74b</id>
+      <id>3c808e46-e300-4dee-8903-c76652c24a43</id>
       <masked>false</masked>
       <name>quantity</name>
+   </variable>
+   <variable>
+      <defaultValue>'2023-03-07T10:01:00.000Z'</defaultValue>
+      <description></description>
+      <id>b28f71ad-31f6-4425-a5a2-ed3da8a7b493</id>
+      <masked>false</masked>
+      <name>nextBillingDate</name>
    </variable>
 </TestCaseEntity>
