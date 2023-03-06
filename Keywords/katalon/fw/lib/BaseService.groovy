@@ -3,10 +3,12 @@ package katalon.fw.lib
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.FormDataBodyParameter
 import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpFileBodyContent
+import com.kms.katalon.core.testobject.impl.HttpFormDataBodyContent
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.webservice.common.RestfulClient
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
@@ -23,6 +25,10 @@ public class BaseService <T> {
 	RequestObject request;
 	ResponseObject response;
 	ArrayList httpHeader;
+	String createUrl;
+	String deleteUrl;
+	String updateUrl;
+
 
 	def T initRequestObject() {
 		request = new RequestObject()
@@ -43,6 +49,11 @@ public class BaseService <T> {
 	def T setBasicAuthorizationHeader(String username, String password) {
 		String token = "$username:$password".bytes.encodeBase64().toString()
 		httpHeader.add(new TestObjectProperty('Authorization', ConditionType.EQUALS, "Basic $token"))
+		return this
+	}
+
+	def T setAcceptHeader(String name) {
+		httpHeader.add(new TestObjectProperty('Accept', ConditionType.EQUALS, name))
 		return this
 	}
 
@@ -68,15 +79,30 @@ public class BaseService <T> {
 		httpHeader.add(new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'application/json'))
 		return this
 	}
-	
+
 	def T setHeader(String headerName, String headerValue) {
 		httpHeader.add(new TestObjectProperty(headerName, ConditionType.EQUALS, headerValue))
+		return this
+	}
+
+	def T setFormDataContentTypeHeader() {
+		httpHeader.add(new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'multipart/form-data'))
+		return this
+	}
+
+	def T setContentLengthHeader(String length) {
+		httpHeader.add(new TestObjectProperty('Content-Length', ConditionType.EQUALS, length))
 		return this
 	}
 
 	def T setPayLoad(Object payload) {
 		String payloadStr = payload instanceof String ? payload : parseObjectToString(payload)
 		request.setBodyContent(new HttpTextBodyContent(payloadStr))
+		return this
+	}
+
+	def T setFormDataPayLoad(List<FormDataBodyParameter> params) {
+		request.setBodyContent(new HttpFormDataBodyContent(params))
 		return this
 	}
 
@@ -157,6 +183,55 @@ public class BaseService <T> {
 	def T withFileBodyContent(String filePath) {
 		HttpFileBodyContent fileBodyContent = new HttpFileBodyContent(filePath)
 		request.setBodyContent(fileBodyContent)
+		return this
+	}
+
+	def T create(String url,Object payload) {
+		setUrl(url)
+		setPayLoad(payload)
+		sendPostRequest()
+		verifyStatusCode(200)
+		return this
+	}
+
+	def T create(Object payload) {
+		setUrl(createUrl)
+		setJsonContentTypeHeader()
+		setPayLoad(payload)
+		sendPostRequest()
+		verifyStatusCode(200)
+		if(parseResponseBodyToJsonObject().data != null) {
+			GlobalVariable.responseId = parseResponseBodyToJsonObject().data.id
+		}
+		return this
+	}
+
+	def T createWithoutStatusCheck(Object payload) {
+		setUrl(createUrl)
+		setJsonContentTypeHeader()
+		setPayLoad(payload)
+		sendPostRequest()
+		return this
+	}
+
+	def T update(String url,Object payload) {
+		setUrl(updateUrl)
+		setPayLoad(payload)
+		sendPutRequest()
+		verifyStatusCode(200)
+		return this
+	}
+
+	def T deleteWithoutStatusCheck() {
+		setUrl(deleteUrl)
+		sendDeleteRequest()
+		return this
+	}
+
+	def T delete() {
+		setUrl(deleteUrl)
+		sendDeleteRequest()
+		verifyStatusCode(200)
 		return this
 	}
 }

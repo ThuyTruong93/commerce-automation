@@ -16,8 +16,7 @@ public class Subscription {
 	Number nextBillingDate
 	Number canceledAt
 
-	public Subscription(Number id, Number createdAt, Number updatedAt, boolean archived, String recurlySubscriptionId, String recurlySubscriptionUuid, boolean unpaid, String status, Number stripeCustomerId, Number testOpsStripeCustomerId, Number enterprisePlanId, String recurlyInvoiceNumber, Number nextBillingDate, Number canceledAt) 
-	{
+	public Subscription(Number id, Number createdAt, Number updatedAt, boolean archived, String recurlySubscriptionId, String recurlySubscriptionUuid, boolean unpaid, String status, Number stripeCustomerId, Number testOpsStripeCustomerId, Number enterprisePlanId, String recurlyInvoiceNumber, Number nextBillingDate, Number canceledAt) {
 		this.id = id
 		this.createdAt = createdAt
 		this.updatedAt = updatedAt

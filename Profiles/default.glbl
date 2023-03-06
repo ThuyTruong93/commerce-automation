@@ -109,4 +109,19 @@
       <initValue>false</initValue>
       <name>isAPIRunning</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://v3.recurly.com/'</initValue>
+      <name>recurlyUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>apiKeyRecurly</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'application/vnd.recurly.v2021-02-25'</initValue>
+      <name>acceptNameRecurly</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
