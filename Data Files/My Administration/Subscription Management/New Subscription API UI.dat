@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DataFileEntity>
    <description></description>
-   <name>Array Subscription</name>
+   <name>New Subscription API UI</name>
    <tag></tag>
    <containsHeaders>true</containsHeaders>
    <csvSeperator></csvSeperator>
-   <dataFileGUID>ca4d5c71-a88c-49a0-b0da-ec2432bfa8e7</dataFileGUID>
-   <dataSourceUrl>Data/My Administration/Subscription Management.xlsx</dataSourceUrl>
+   <dataFileGUID>5d78b85e-dab0-44e5-b09a-157c7ea8d926</dataFileGUID>
+   <dataSourceUrl>D:\Automation Project\commerce-automation\Data\My Administration\Subscription Management.xlsx</dataSourceUrl>
    <driver>ExcelFile</driver>
-   <isInternalPath>true</isInternalPath>
+   <isInternalPath>false</isInternalPath>
    <query></query>
    <secureUserAccount>false</secureUserAccount>
-   <sheetName>Array Subscription</sheetName>
+   <sheetName>New Subscription API UI</sheetName>
    <usingGlobalDBSetting>false</usingGlobalDBSetting>
 </DataFileEntity>

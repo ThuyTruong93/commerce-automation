@@ -37,9 +37,10 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	Number canceledAt
 
 	//respond array list subscription
-    def uuidArray = []
+    List<String> uuidArray = []
 
-	public SubscriptionService listActiveSubscription(Number accountId) {
+	public SubscriptionService listActiveSubscription(String accountId) {
+		accountId = accountId.toLong()
 		initRequestObject()
 				.setUrl(listActiveSubscriptionUrl+accountId+"/subscriptions?state=active")
 				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
@@ -48,6 +49,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.sendGetRequest()
 
 		def lengthListActiveBody = parseResponseBodyToJsonObject().data.size()
+		println "lengthListActiveBody: $lengthListActiveBody"
 		for (int i = 0;i<lengthListActiveBody;i++) {
 			this.uuidArray << (parseResponseBodyToJsonObject().data[i].uuid)
 		}
@@ -56,7 +58,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService createNewSubscription(Number accountId, String planId, Number quantity) {
+	public SubscriptionService createNewSubscription(String accountId, String planId, String quantity) {
+		accountId = accountId.toLong()
+		quantity = quantity.toLong()
 		def body = [
 			[ "organizationId": accountId,"planId": planId, "number": quantity]
 		]
@@ -71,14 +75,17 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService createListNewSubscription(Number accountId, String planId, Number quantity) {
-		def dem =  planId.count(',')  + 1
+	public SubscriptionService createListNewSubscription(String accountId, String planId, String quantity) {
+		def dem =  planId.count(',')+1
+		//def accountID = accountId.toLong()
 		println dem
 		for (int i = 0; i < dem; i++) {
 			def planIdArray = planId.split(",").collect { it.trim() }
-			def quantityArray = quantity.split(",").collect { it.trim() }
-			println planIdArray
-			println quantityArray
+			def quantityArray = quantity.split(",").collect { it.trim().toLong() }.findAll { it != null }
+
+			println accountId
+			println planIdArray[i]
+			println quantityArray[i]
 		
 		def body = [
 			[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
@@ -89,13 +96,14 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.setJsonContentTypeHeader()
 				.setPayLoad(parseObjectToString(body))
 				.sendPostRequest()
-				.verifyStatusCode(200)
+				.verifyStatusCode(200)						
 		}
 		return this	
 	}
 
 
 	public SubscriptionService markPaidInvoiceSubscriptionByInvoiceNumber(String invoiceNumber) {
+
 		initRequestObject()
 				.setUrl(markPaidInvoiceSubscriptionUrl+"number-$invoiceNumber"+"/mark_successful")
 				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
@@ -183,6 +191,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 					.setAcceptHeader(GlobalVariable.acceptNameRecurly)
 					.sendDeleteRequest()
 		}
+		uuidArray.clear()
 		WebUI.delay(5)
 		return this
 	}
