@@ -81,6 +81,6 @@
       <description></description>
       <id>b28f71ad-31f6-4425-a5a2-ed3da8a7b493</id>
       <masked>false</masked>
-      <name>nextBillingDate</name>
+      <name>next_bill_date</name>
    </variable>
 </TestCaseEntity>

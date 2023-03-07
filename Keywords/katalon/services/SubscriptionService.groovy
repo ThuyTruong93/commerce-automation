@@ -226,8 +226,8 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService updateNextBillingDate(String nextBillingDate, String recurlySubscriptionUuid) {
-		def body = ["next_bill_date": nextBillingDate]
+	public SubscriptionService updateNextBillingDate(String next_bill_date, String recurlySubscriptionUuid) {
+		def body = ["next_bill_date": next_bill_date]
 
 		initRequestObject()
 				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
@@ -241,8 +241,8 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService updateNextBillingDateList(String nextBillingDate) {
-		def body = ["next_bill_date": nextBillingDate]
+	public SubscriptionService updateNextBillingDateList(String next_bill_date) {
+		def body = ["next_bill_date": next_bill_date]
 
 		//handle case array uuid
 		for (int i = 0;i< uuidArray.size();i++) {
