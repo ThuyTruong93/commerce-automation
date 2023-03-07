@@ -37,10 +37,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	Number canceledAt
 
 	//respond array list subscription
-    List<String> uuidArray = []
+	List<String> uuidArray = []
 
-	public SubscriptionService listActiveSubscription(String accountId) {
-		accountId = accountId.toLong()
+	public SubscriptionService listActiveSubscription(Number accountId) {
 		initRequestObject()
 				.setUrl(listActiveSubscriptionUrl+accountId+"/subscriptions?state=active")
 				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
@@ -58,9 +57,8 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService createNewSubscription(String accountId, String planId, String quantity) {
-		accountId = accountId.toLong()
-		quantity = quantity.toLong()
+	public SubscriptionService createNewSubscription(Number accountId, String planId, Number quantity) {
+
 		def body = [
 			[ "organizationId": accountId,"planId": planId, "number": quantity]
 		]
@@ -75,30 +73,29 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public SubscriptionService createListNewSubscription(String accountId, String planId, String quantity) {
+	public SubscriptionService createListNewSubscription(Number accountId, String planId, String quantity) {
 		def dem =  planId.count(',')+1
-		def accountID = accountId.toLong()
 		println dem
 		for (int i = 0; i < dem; i++) {
 			def planIdArray = planId.split(",").collect { it.trim() }
-			def quantityArray = quantity.split(",").collect { it.trim().toLong() }.findAll { it != null }
+			def quantityArray = quantity.split(",").collect { it.trim().toString().toLong() }.findAll { it != null }
 
 			println accountId
 			println planIdArray[i]
 			println quantityArray[i]
-		
-		def body = [
-			[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
-		]
-		initRequestObject()
-				.setUrl(subscriptionUrl)
-				.setBearerAuthorizationHeader()
-				.setJsonContentTypeHeader()
-				.setPayLoad(parseObjectToString(body))
-				.sendPostRequest()
-				.verifyStatusCode(200)						
+
+			def body = [
+				[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
+			]
+			initRequestObject()
+					.setUrl(subscriptionUrl)
+					.setBearerAuthorizationHeader()
+					.setJsonContentTypeHeader()
+					.setPayLoad(parseObjectToString(body))
+					.sendPostRequest()
+					.verifyStatusCode(200)
 		}
-		return this	
+		return this
 	}
 
 
@@ -129,9 +126,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService upgradeSubscription(Number accountId,String planId,Number quantity, String recurlySubscriptionUuid) {
 		def quantityUpgrade = quantity + 1
-		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]
-		]
+		def body = [[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]]
 
 		initRequestObject()
 				.setUrl(subscriptionUrl)
@@ -233,7 +228,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService updateNextBillingDate(String nextBillingDate, String recurlySubscriptionUuid) {
 		def body = ["next_bill_date": nextBillingDate]
-		
+
 		initRequestObject()
 				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
 				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
@@ -245,26 +240,26 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 		return this
 	}
-	
+
 	public SubscriptionService updateNextBillingDateList(String nextBillingDate) {
 		def body = ["next_bill_date": nextBillingDate]
-		
+
 		//handle case array uuid
 		for (int i = 0;i< uuidArray.size();i++) {
-				def recurlySubscriptionUuid = uuidArray[i]
-				println "$recurlySubscriptionUuid"
+			def recurlySubscriptionUuid = uuidArray[i]
+			println "$recurlySubscriptionUuid"
 
-		initRequestObject()
-				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
-				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-				.setJsonContentTypeHeader()
-				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-				.setPayLoad(parseObjectToString(body))
-				.sendPutRequest()
-				.verifyStatusCode(200)
+			initRequestObject()
+					.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+					.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+					.setJsonContentTypeHeader()
+					.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+					.setPayLoad(parseObjectToString(body))
+					.sendPutRequest()
+					.verifyStatusCode(200)
 		}
 
 		return this
-	}		
+	}
 
 }

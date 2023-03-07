@@ -4,6 +4,9 @@ import katalon.fw.lib.Page
 import katalon.services.SubscriptionService
 import katalon.testops.services.LoginService
 
+accountId = accountId.toString().toLong()
+quantity = quantity.toString().toLong()
+
 String decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(password))
 
 'User login to get token '

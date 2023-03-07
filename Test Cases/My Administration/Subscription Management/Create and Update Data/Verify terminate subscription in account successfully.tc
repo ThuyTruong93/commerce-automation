@@ -5,6 +5,15 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b916bd5d-c95c-4d4f-9ce5-261f03921d53</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>a6db7bc4-5686-4c50-95db-9ced9ea87978</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/My Administration/Subscription Management/Terminate Subscription</testDataId>
+   </testDataLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
@@ -18,9 +27,9 @@
       <variableId>ec7db414-5c8f-4bc5-a166-b21dba3e9448</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
+      <testDataLinkId>a6db7bc4-5686-4c50-95db-9ced9ea87978</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>accountID</value>
       <variableId>2147ed81-2d94-45ff-9ea7-92176e745797</variableId>
    </variableLinks>
    <variableLinks>
