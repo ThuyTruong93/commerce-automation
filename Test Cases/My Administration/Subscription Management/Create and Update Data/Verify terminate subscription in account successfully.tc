@@ -9,8 +9,8 @@
       <combinationType>ONE</combinationType>
       <id>a6db7bc4-5686-4c50-95db-9ced9ea87978</id>
       <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
+         <iterationType>RANGE</iterationType>
+         <value>1-1</value>
       </iterationEntity>
       <testDataId>Data Files/My Administration/Subscription Management/Terminate Subscription</testDataId>
    </testDataLinks>

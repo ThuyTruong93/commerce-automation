@@ -24,15 +24,17 @@ class DeleteDataAfterTest {
 	
 	@AfterTestCase
 	def deleteCustomField(TestCaseContext testCaseContext) {
-		long id = testCaseContext.getTestCaseVariables().get("customFieldId")
-		if(id) {
-			def response = Page.nav(CustomFieldDefinitionService).delete(id)
-			if (response.getResponseStatusCode() == 200) {
-				println('Delete Custom Field success!!! CustomFieldId: ' + id)
-			} else {
-				println('Delete Custom Field faild: ' + JsonOutput.prettyPrint(JsonOutput.toJson(response.response)))
-			}
-		}
+//		println "show error"
+//		long id = testCaseContext.getTestCaseVariables().get("customFieldId")
+//		println "exit error"
+//		if(id) {
+//			def response = Page.nav(CustomFieldDefinitionService).delete(id)
+//			if (response.getResponseStatusCode() == 200) {
+//				println('Delete Custom Field success!!! CustomFieldId: ' + id)
+//			} else {
+//				println('Delete Custom Field faild: ' + JsonOutput.prettyPrint(JsonOutput.toJson(response.response)))
+//			}
+//		}
 	}
 	
 	@AfterTestCase
@@ -61,14 +63,14 @@ class DeleteDataAfterTest {
 	
 	@AfterTestCase
 	def deleteProject(TestCaseContext testCaseContext) {
-		long projectId = testCaseContext.getTestCaseVariables().get("projectId")
-		if(projectId) {
-			def response = Page.nav(ProjectService).delete(projectId)
-			if (response.getResponseStatusCode() == 200) {
-				println('Delete project success!!! projectId: ' + projectId)
-			} else {
-				println('Delete project faild: ' + JsonOutput.prettyPrint(JsonOutput.toJson(response.response)))
-			}
-		}
+//		long projectId = testCaseContext.getTestCaseVariables().get("projectId")
+//		if(projectId) {
+//			def response = Page.nav(ProjectService).delete(projectId)
+//			if (response.getResponseStatusCode() == 200) {
+//				println('Delete project success!!! projectId: ' + projectId)
+//			} else {
+//				println('Delete project faild: ' + JsonOutput.prettyPrint(JsonOutput.toJson(response.response)))
+//			}
+//		}
 	}
 }

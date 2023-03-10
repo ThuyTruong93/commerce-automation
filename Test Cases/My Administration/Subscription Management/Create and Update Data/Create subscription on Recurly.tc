@@ -12,7 +12,7 @@
          <iterationType>ALL</iterationType>
          <value></value>
       </iterationEntity>
-      <testDataId>Data Files/My Administration/Subscription Management/New Subscription</testDataId>
+      <testDataId>Data Files/My Administration/Subscription Management/New Subscription on Recurly</testDataId>
    </testDataLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

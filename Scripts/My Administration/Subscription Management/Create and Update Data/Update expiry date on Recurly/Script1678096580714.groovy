@@ -7,5 +7,5 @@ import katalon.testops.services.LoginService
 
 accountId = accountId.toString().toLong()
 
-Page.nav(SubscriptionService).listActiveSubscription(accountId)
+Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .updateNextBillingDateList(next_bill_date)

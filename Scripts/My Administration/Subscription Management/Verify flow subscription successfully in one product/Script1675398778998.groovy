@@ -12,7 +12,7 @@ String decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(password))
 'User login to get token '
 Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken()
 
-Page.nav(SubscriptionService).listActiveSubscription(accountId)
+Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .terminateListSubscription()						 
 							 
 def subscriptionBody = Page.nav(SubscriptionService).createNewSubscription(accountId, planId, quantity).parseResponseBodyToJsonObject().data[0]
