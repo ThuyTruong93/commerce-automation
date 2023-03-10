@@ -12,6 +12,6 @@ String decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(password))
 Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken()
 
 Page.nav(SubscriptionService).getListActiveSubscription(accountId)
-							 .terminateListSubscription()						 
-							 
+							 .terminateListSubscription()
+					 							 
 Page.nav(SubscriptionService).createListNewSubscriptionByUIAPI(accountId, planId, quantity)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Create subscription on API UI</name>
+   <name>POST Create subscription on API UI</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>d68f6ffb-e19c-4f14-87e2-1c7ea532ff1d</testCaseGuid>
@@ -9,8 +9,8 @@
       <combinationType>ONE</combinationType>
       <id>98d40633-e36d-4e14-bee4-2eebea9dfbc5</id>
       <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
+         <iterationType>RANGE</iterationType>
+         <value>1-1</value>
       </iterationEntity>
       <testDataId>Data Files/My Administration/Subscription Management/New Subscription API UI</testDataId>
    </testDataLinks>
@@ -29,13 +29,13 @@
    <variableLinks>
       <testDataLinkId>98d40633-e36d-4e14-bee4-2eebea9dfbc5</testDataLinkId>
       <type>DATA_COLUMN</type>
-      <value>accountID</value>
+      <value>organizationId</value>
       <variableId>2147ed81-2d94-45ff-9ea7-92176e745797</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId>98d40633-e36d-4e14-bee4-2eebea9dfbc5</testDataLinkId>
       <type>DATA_COLUMN</type>
-      <value>planCodeRecurly</value>
+      <value>planId</value>
       <variableId>b2b421ea-4b82-4c94-b90a-0ff627bf28e6</variableId>
    </variableLinks>
    <variableLinks>
@@ -59,7 +59,7 @@
       <name>password</name>
    </variable>
    <variable>
-      <defaultValue>'1939937'</defaultValue>
+      <defaultValue>1927334</defaultValue>
       <description></description>
       <id>2147ed81-2d94-45ff-9ea7-92176e745797</id>
       <masked>false</masked>
@@ -73,7 +73,7 @@
       <name>planId</name>
    </variable>
    <variable>
-      <defaultValue>'3'</defaultValue>
+      <defaultValue>1</defaultValue>
       <description></description>
       <id>201b1599-8ca9-4318-bc2a-9d432997e74b</id>
       <masked>false</masked>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Update expiry date on Recurly</name>
+   <name>POST Create subscription on Recurly</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>16a2e39d-8711-4477-9f3f-85d3f30d42a6</testCaseGuid>
+   <testCaseGuid>6d3e330c-177c-47f4-8253-b4afb5d64a1a</testCaseGuid>
    <testDataLinks>
       <combinationType>ONE</combinationType>
-      <id>3b12499f-d117-48d3-b8f0-20e5b810ff26</id>
+      <id>e67b1cc5-fdec-4825-87e5-6d5281cc468e</id>
       <iterationEntity>
-         <iterationType>ALL</iterationType>
-         <value></value>
+         <iterationType>RANGE</iterationType>
+         <value>1-1</value>
       </iterationEntity>
       <testDataId>Data Files/My Administration/Subscription Management/New Subscription on Recurly</testDataId>
    </testDataLinks>
@@ -27,25 +27,25 @@
       <variableId>51c8e122-77f6-423a-9833-296bd22e31cd</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b12499f-d117-48d3-b8f0-20e5b810ff26</testDataLinkId>
+      <testDataLinkId>e67b1cc5-fdec-4825-87e5-6d5281cc468e</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>accountID</value>
       <variableId>07991461-6214-49d7-bfc9-da98538b6e97</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b12499f-d117-48d3-b8f0-20e5b810ff26</testDataLinkId>
+      <testDataLinkId>e67b1cc5-fdec-4825-87e5-6d5281cc468e</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>planCodeRecurly</value>
       <variableId>26d64be2-ce7e-4dba-9e56-3b74479b0366</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b12499f-d117-48d3-b8f0-20e5b810ff26</testDataLinkId>
+      <testDataLinkId>e67b1cc5-fdec-4825-87e5-6d5281cc468e</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>quantity</value>
       <variableId>3c808e46-e300-4dee-8903-c76652c24a43</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>3b12499f-d117-48d3-b8f0-20e5b810ff26</testDataLinkId>
+      <testDataLinkId>e67b1cc5-fdec-4825-87e5-6d5281cc468e</testDataLinkId>
       <type>DATA_COLUMN</type>
       <value>next_bill_date</value>
       <variableId>b28f71ad-31f6-4425-a5a2-ed3da8a7b493</variableId>
@@ -86,7 +86,7 @@
       <name>quantity</name>
    </variable>
    <variable>
-      <defaultValue>'2023-03-09T10:01:00.000Z'</defaultValue>
+      <defaultValue>'2023-03-07T10:01:00.000Z'</defaultValue>
       <description></description>
       <id>b28f71ad-31f6-4425-a5a2-ed3da8a7b493</id>
       <masked>false</masked>

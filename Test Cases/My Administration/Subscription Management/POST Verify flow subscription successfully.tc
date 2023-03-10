@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Verify terminate subscription in account successfully</name>
+   <name>POST Verify flow subscription successfully</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b916bd5d-c95c-4d4f-9ce5-261f03921d53</testCaseGuid>
+   <testCaseGuid>47b49995-4699-44ef-b116-75ed20f23164</testCaseGuid>
    <testDataLinks>
       <combinationType>ONE</combinationType>
-      <id>a6db7bc4-5686-4c50-95db-9ced9ea87978</id>
+      <id>db164563-8bdb-4c7a-ad3f-0f2451b34065</id>
       <iterationEntity>
          <iterationType>RANGE</iterationType>
          <value>1-1</value>
       </iterationEntity>
-      <testDataId>Data Files/My Administration/Subscription Management/Terminate Subscription</testDataId>
+      <testDataId>Data Files/My Administration/Subscription Management/New Subscription API UI</testDataId>
    </testDataLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
@@ -27,25 +27,25 @@
       <variableId>ec7db414-5c8f-4bc5-a166-b21dba3e9448</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId>a6db7bc4-5686-4c50-95db-9ced9ea87978</testDataLinkId>
+      <testDataLinkId>db164563-8bdb-4c7a-ad3f-0f2451b34065</testDataLinkId>
       <type>DATA_COLUMN</type>
-      <value>accountID</value>
+      <value>organizationId</value>
       <variableId>2147ed81-2d94-45ff-9ea7-92176e745797</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
+      <testDataLinkId>db164563-8bdb-4c7a-ad3f-0f2451b34065</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>planId</value>
       <variableId>b2b421ea-4b82-4c94-b90a-0ff627bf28e6</variableId>
    </variableLinks>
    <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
+      <testDataLinkId>db164563-8bdb-4c7a-ad3f-0f2451b34065</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>quantity</value>
       <variableId>201b1599-8ca9-4318-bc2a-9d432997e74b</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'thuy.truong@katalon.com'</defaultValue>
+      <defaultValue>'truongbaothuy93+10@gmail.com'</defaultValue>
       <description></description>
       <id>cb9ea897-fa9b-4d7d-8193-8933da8d51da</id>
       <masked>false</masked>
@@ -59,7 +59,7 @@
       <name>password</name>
    </variable>
    <variable>
-      <defaultValue>1940191</defaultValue>
+      <defaultValue>1939937</defaultValue>
       <description></description>
       <id>2147ed81-2d94-45ff-9ea7-92176e745797</id>
       <masked>false</masked>
@@ -77,6 +77,6 @@
       <description></description>
       <id>201b1599-8ca9-4318-bc2a-9d432997e74b</id>
       <masked>false</masked>
-      <name>number</name>
+      <name>quantity</name>
    </variable>
 </TestCaseEntity>

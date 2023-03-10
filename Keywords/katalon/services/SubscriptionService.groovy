@@ -55,14 +55,12 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		println "uuidArray: $uuidArray"
 
 		return this
-				
+
 	}
 
 	public SubscriptionService createNewSubscription(Number accountId, String planId, Number quantity) {
 
-		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": quantity]
-		]
+		def body = [[ "organizationId": accountId,"planId": planId, "number": quantity]]
 		initRequestObject()
 				.setUrl(subscriptionUrl)
 				.setBearerAuthorizationHeader()
@@ -82,14 +80,12 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				def planIdArray = planId.split(",").collect { it.trim() }
 				//def quantityArray = quantity.split(",").collect { it.trim().toString().toLong() }.findAll { it != null }
 				def quantityArray = CommonUtility.convertString2ListString (quantity, ",")
-	
+
 				println accountId
 				println planIdArray[i]
 				println quantityArray[i]
-	
-				def body = [
-					[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
-				]
+
+				def body = [[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]]
 				initRequestObject()
 						.setUrl(subscriptionUrl)
 						.setBearerAuthorizationHeader()
@@ -97,9 +93,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 						.setPayLoad(parseObjectToString(body))
 						.sendPostRequest()
 						.verifyStatusCode(200)
-		
+
 				markPaidInvoiceSubscriptionByInvoiceNumber(parseResponseBodyToJsonObject().data.recurlyInvoiceNumber)
-			}		
+			}
 		}
 		return this
 	}
@@ -132,9 +128,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService upgradeSubscription(Number accountId,String planId,Number quantity, String recurlySubscriptionUuid) {
 		def quantityUpgrade = quantity + 1
-		def body = [
-			[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]
-		]
+		def body = [[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]]
 
 		initRequestObject()
 				.setUrl(subscriptionUrl)
@@ -190,18 +184,18 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		for (int i = 0 ; i< uuidArray.size(); i++) {
 			def uuid = uuidArray[i]
 			println "uuid = $uuid"
-				initRequestObject()
-						.setUrl(terminateSubscriptionUrl+uuid+"?refund=none&charge=true")
-						.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-						.setJsonContentTypeHeader()
-						.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-						.sendDeleteRequest()
+			initRequestObject()
+					.setUrl(terminateSubscriptionUrl+uuid+"?refund=none&charge=true")
+					.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+					.setJsonContentTypeHeader()
+					.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+					.sendDeleteRequest()
 
-			}
+		}
 		uuidArray.clear()
 		return this
 	}
-	
+
 	public updateSubscriptionJson(Object result) {
 		this.id = result.id
 		this.createdAt = result.createdAt
