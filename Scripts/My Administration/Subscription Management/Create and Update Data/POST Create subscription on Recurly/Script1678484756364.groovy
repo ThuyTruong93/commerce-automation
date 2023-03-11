@@ -7,9 +7,8 @@ quantity = quantity.toString().toLong()
 Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .terminateListSubscription()
 
-def subscriptionBody = Page.nav(SubscriptionService).createNewSubscriptionRecurly(accountId, planId, quantity).parseResponseBodyToJsonObject()
-		println "subscription body: $subscriptionBody"	
-		println subscriptionBody.uuid		
+Page.nav(SubscriptionService).createNewSubscriptionRecurly(accountId, planId, quantity)
+
 						 
-Page.nav(SubscriptionService).updateNextBillingDate(next_bill_date, subscriptionBody.uuid)
-							 .markPaidInvoiceSubscriptionByInvoiceId(subscriptionBody.active_invoice_id)
+//Page.nav(SubscriptionService).updateNextBillingDate(next_bill_date, subscriptionBody.uuid)
+//							 .markPaidInvoiceSubscriptionByInvoiceId(subscriptionBody.active_invoice_id)

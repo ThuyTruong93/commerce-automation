@@ -95,6 +95,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 						.verifyStatusCode(200)
 
 				markPaidInvoiceSubscriptionByInvoiceNumber(parseResponseBodyToJsonObject().data.recurlyInvoiceNumber)
+
 			}
 		}
 		return this
@@ -176,11 +177,6 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	}
 
 	public SubscriptionService terminateListSubscription() {
-		if(uuidArray.size() == 0)
-		{
-			return this
-		}
-		println "terminate"
 		for (int i = 0 ; i< uuidArray.size(); i++) {
 			def uuid = uuidArray[i]
 			println "uuid = $uuid"
@@ -216,18 +212,43 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	//Subscription on Recurly
 
 	public SubscriptionService createNewSubscriptionRecurly(Number accountId, String planId, Number quantity) {
-		def body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-			"quantity": quantity]
 
-		initRequestObject()
-				.setUrl(subscriptionRecurlyUrl)
-				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-				.setJsonContentTypeHeader()
-				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-				.setPayLoad(parseObjectToString(body))
-				.sendPostRequest()
-				.verifyStatusCode(201)
+		def body = []
 
+		switch(getSubscriptionName(planId).toString())
+		{
+			case 'kre_devops':
+			case 'kre_node-locked':
+			case 'kre_floating':
+			case 'kse_node-locked':
+			case 'kse_floating':
+			case 'kse_per-user':
+			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+				"quantity": quantity]
+			postCreateNewSubscriptionRecurly(body)
+			break
+
+			case 'testops_platform':
+			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+				"quantity": 1,"add_ons": [["code": "testops_platform_test_results","quantity": quantity]]]
+			println "body in switch cases: $body"
+			postCreateNewSubscriptionRecurly(body)
+			break
+
+			case 'testcloud_session_web':
+			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+				"quantity": 1,"add_ons": [["code": "testcloud_web_sessions","quantity": quantity]]]
+			println "body in switch cases: $body"
+			postCreateNewSubscriptionRecurly(body)
+			break
+
+			case 'visual_testing_pro':
+			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+				"quantity": 1,"add_ons": [["code": "visual_testing_checkpoints","quantity": quantity]]]
+			println "body in switch cases: $body"
+			postCreateNewSubscriptionRecurly(body)
+			break
+		}
 		return this
 	}
 
@@ -265,6 +286,25 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		}
 
 		return this
+	}
+
+	public postCreateNewSubscriptionRecurly(Object body){
+		initRequestObject()
+				.setUrl(subscriptionRecurlyUrl)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPostRequest()
+				.verifyStatusCode(201)
+		return this
+	}
+
+	public getSubscriptionName(String planId) {
+		def lastIndex = planId.lastIndexOf('_')
+		def result = planId.substring(0, lastIndex)
+		println result
+		return result
 	}
 
 }
