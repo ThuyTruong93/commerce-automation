@@ -2,7 +2,8 @@ package katalon.services
 import katalon.utility.CommonUtility
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-
+import katalon.fw.db.PostgreSql
+import katalon.fw.lib.BaseTable
 import internal.GlobalVariable
 import katalon.fw.lib.BaseService
 
@@ -16,6 +17,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String subscriptionRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions"
 	static String subscriptionUpdateRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
 
+	
 	//	Number accountId;
 	//	String planId;
 	//	Number number;
