@@ -10,12 +10,17 @@ public class BillingStudioTable extends BaseTable<BillingStudioTable> {
 		dbName = "katone"
 		table = "billing.studio_subscriptions"
 	}
-	
-	public BillingStudioTable selectStudioSubscription(Number accountId) {
-		def selectScript = "select * from billing.studio_subscriptions ats2 where ats2.accountid  = $accountId and ats2.status = 'ACTIVE';"
 
-		def values = execute(selectScript)
-		println "value: $values"
+	public BillingStudioTable selectStudioSubscription(Number accountId) {
+		def selectScript = "select * from billing.studio_subscriptions ats2 where ats2.accountid  = $accountId;"
+
+		//def values = executeSelect("accountid = $accountId","accountid")
+		println "$dbName"
+		println "$table"
+		//executeSelect(dbName,table,"accountid = $accountId","accountid")
+		
+		def value = execute(selectScript)
+		println "value: $value"
 		return this
 	}
 }

@@ -6,7 +6,7 @@ import java.sql.ResultSetMetaData
 
 import katalon.fw.db.PostgreSql
 import katalon.fw.db.RSet
-import katalon.fw.utility.FileHelper
+import katalon.utility.FileHelper
 
 public class BaseTable <T> {
 

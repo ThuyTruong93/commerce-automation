@@ -9,7 +9,7 @@ public class ExecutionEnvService extends BaseService<ExecutionEnvService> {
 	public List<Device> getResponseBody() {
 		return parseResponseBodyToClassObject(Device[].class)
 	}
-	
+
 	public ExecutionEnvService compareAllDevicesListToOnlyAvailableList(List<Device> allDevices, List<Device> onlyAvailableDevices) {
 		// 30 is just an average estimation by observing the results.
 		WS.verifyGreaterThanOrEqual(allDevices.size() - onlyAvailableDevices.size(), 30)

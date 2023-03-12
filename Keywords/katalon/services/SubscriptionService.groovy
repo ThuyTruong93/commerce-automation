@@ -17,7 +17,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String subscriptionRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions"
 	static String subscriptionUpdateRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
 
-	
+
 	//	Number accountId;
 	//	String planId;
 	//	Number number;
