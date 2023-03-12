@@ -223,31 +223,31 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 			case 'kse_node-locked':
 			case 'kse_floating':
 			case 'kse_per-user':
-			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-				"quantity": quantity]
-			postCreateNewSubscriptionRecurly(body)
-			break
+				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+					"quantity": quantity]
+				postCreateNewSubscriptionRecurly(body)
+				break
 
 			case 'testops_platform':
-			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-				"quantity": 1,"add_ons": [["code": "testops_platform_test_results","quantity": quantity]]]
-			println "body in switch cases: $body"
-			postCreateNewSubscriptionRecurly(body)
-			break
+				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+					"quantity": 1,"add_ons": [["code": "testops_platform_test_results","quantity": quantity]]]
+				println "body in switch cases: $body"
+				postCreateNewSubscriptionRecurly(body)
+				break
 
 			case 'testcloud_session_web':
-			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-				"quantity": 1,"add_ons": [["code": "testcloud_web_sessions","quantity": quantity]]]
-			println "body in switch cases: $body"
-			postCreateNewSubscriptionRecurly(body)
-			break
+				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+					"quantity": 1,"add_ons": [["code": "testcloud_web_sessions","quantity": quantity]]]
+				println "body in switch cases: $body"
+				postCreateNewSubscriptionRecurly(body)
+				break
 
 			case 'visual_testing_pro':
-			body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-				"quantity": 1,"add_ons": [["code": "visual_testing_checkpoints","quantity": quantity]]]
-			println "body in switch cases: $body"
-			postCreateNewSubscriptionRecurly(body)
-			break
+				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+					"quantity": 1,"add_ons": [["code": "visual_testing_checkpoints","quantity": quantity]]]
+				println "body in switch cases: $body"
+				postCreateNewSubscriptionRecurly(body)
+				break
 		}
 		return this
 	}

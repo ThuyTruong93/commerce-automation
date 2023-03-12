@@ -12,12 +12,34 @@ import internal.GlobalVariable
 
 public class PostgreSql {
 
-	private Connection conn = null;
+	private Connection conn = null
 
 	public PostgreSql openConnection() {
 		if (conn == null ) {
 			String decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(GlobalVariable.dbpwd))
-			conn =  DriverManager.getConnection(connectionUrl(),GlobalVariable.dbuser,decryptedPwd )
+			conn =  DriverManager.getConnection(connectionUrl(),GlobalVariable.dbServer,decryptedPwd )
+		}
+		return this
+	}
+
+	public PostgreSql openConnection(String dbName) {
+
+		String decryptedPwd
+		String user
+
+		switch(dbName){
+			case "kit":
+				user = GlobalVariable.dbKitUser
+				decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(GlobalVariable.dbKitPwd))
+				break
+			case "katone":
+				user = GlobalVariable.dbKatoneUser
+				decryptedPwd =  CryptoUtil.decode(CryptoUtil.getDefault(GlobalVariable.dbKatonePwd))
+				break
+		}
+
+		if (conn == null || !conn.catalog.contains(dbName)) {
+			conn =  DriverManager.getConnection(connectionUrl(dbName),user,decryptedPwd);
 		}
 		return this
 	}
@@ -52,12 +74,13 @@ public class PostgreSql {
 			Statement stm = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
 					ResultSet.CONCUR_UPDATABLE)
 			stm.executeUpdate(queryStr)
-			conn.commit();
-			//stm.close();
-			println "Database updated successfully ";
+			if(!conn.getAutoCommit()){
+				conn.commit()
+			}
+			println "Database updated successfully "
 		}
 		catch (SQLException e) {
-			println e.getMessage();
+			println e.getMessage()
 		}
 	}
 
@@ -76,11 +99,16 @@ public class PostgreSql {
 		Statement stm = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
 				ResultSet.CONCUR_UPDATABLE)
 		boolean result = stm.execute(queryStr)
-		conn.commit()
-		//stm.close();
+		if(!conn.getAutoCommit()){
+			conn.commit()
+		}
 	}
 
 	private String connectionUrl() {
 		return "jdbc:postgresql://"+ GlobalVariable.dbserver + ":" + GlobalVariable.port + "/" + GlobalVariable.dbname
+	}
+
+	private String connectionUrl(String dbName) {
+		return "jdbc:postgresql://"+ GlobalVariable.dbServer + ":" + GlobalVariable.dbPort + "/" + dbName
 	}
 }

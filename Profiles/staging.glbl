@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'thuy.truong@katalon.com'</initValue>
+      <initValue>'QEAutomationKatalon@gmail.com'</initValue>
       <name>owner_mail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'KzXoJXJYxul3D9DRe4bCdA=='</initValue>
+      <initValue>'VlZUbm6O36rsHucXakihkpTG4Gq0o9QN'</initValue>
       <name>owner_pass</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,6 +76,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'1939127'</initValue>
+      <name>defaultAccount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'Platform General'</initValue>
       <name>platformGeneralProject</name>
    </GlobalVariableEntity>
@@ -98,6 +103,11 @@
       <description></description>
       <initValue>'375340'</initValue>
       <name>cloudBasedExecProjectId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'375813'</initValue>
+      <name>cloudBasedExecWOTunnelActiveProjectId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -178,6 +188,96 @@
       <description></description>
       <initValue>'https://testcloud.staging.katalon.com/'</initValue>
       <name>testCloudUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'452769002382-qekfm30rrrp61r8d9j4jgstupatb1eqg.apps.googleusercontent.com'</initValue>
+      <name>gshClientID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'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'</initValue>
+      <name>gshClientSecret</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1//0eHSofrilqYG0CgYIARAAGA4SNwF-L9Ir_lumGkNMeHkTx8TGJw7sj5OYeO-AOq7jcNmQhnBx3oB2XW3_ocF40xeObHnZsBheX4A'</initValue>
+      <name>gshRefreshToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>gshToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tsStartTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tsName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcStartTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>testExecUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1qaKRu5ItvQSzL1qpzK3WLcLrqzOLwQAzwRfoZwr8rIA'</initValue>
+      <name>testExecSPRId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'staging'</initValue>
+      <name>testExecSheetName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>responseId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'staging-katone-katone-aurora-postgresql14-db-cluster.cluster-cdkpxl18stui.us-east-1.rds.amazonaws.com'</initValue>
+      <name>dbServer</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'5432'</initValue>
+      <name>dbPort</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'kit_app_huydao'</initValue>
+      <name>dbKitUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'kBMyprpRuYk1gf3Dr40WRg=='</initValue>
+      <name>dbKitPwd</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RKyEFFsTevnLcmZilTBhaQ=='</initValue>
+      <name>dbKatonePwd</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katone_app_huydao'</initValue>
+      <name>dbKatoneUser</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

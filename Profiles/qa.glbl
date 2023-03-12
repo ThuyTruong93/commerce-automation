@@ -26,13 +26,13 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'UUVBdXRvbWF0aW9uS2F0YWxvbkBnbWFpbC5jb206UUVBdXRvS0B0YWxvbjEyMw=='</initValue>
-      <name>basicToken</name>
+      <initValue>'VlZUbm6O36rsHucXakihkpTG4Gq0o9QN'</initValue>
+      <name>owner_pass</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'VlZUbm6O36rsHucXakihkpTG4Gq0o9QN'</initValue>
-      <name>owner_pass</name>
+      <initValue>'UUVBdXRvbWF0aW9uS2F0YWxvbkBnbWFpbC5jb206UUVBdXRvS0B0YWxvbjEyMw=='</initValue>
+      <name>basicToken</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -76,6 +76,16 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'Katalon on Katalon'</initValue>
+      <name>defaultOrgName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'71'</initValue>
+      <name>defaultAccount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'107'</initValue>
       <name>turingAndGryffindoorTeamId</name>
    </GlobalVariableEntity>
@@ -98,6 +108,11 @@
       <description></description>
       <initValue>'90'</initValue>
       <name>cloudBasedExecProjectId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'993'</initValue>
+      <name>cloudBasedExecWOTunnelActiveProjectId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -176,8 +191,108 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://v3.recurly.com/'</initValue>
-      <name>recurlyUrl</name>
+      <initValue>'452769002382-qekfm30rrrp61r8d9j4jgstupatb1eqg.apps.googleusercontent.com'</initValue>
+      <name>gshClientID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'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'</initValue>
+      <name>gshClientSecret</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1//0eHSofrilqYG0CgYIARAAGA4SNwF-L9Ir_lumGkNMeHkTx8TGJw7sj5OYeO-AOq7jcNmQhnBx3oB2XW3_ocF40xeObHnZsBheX4A'</initValue>
+      <name>gshRefreshToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>gshToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tsStartTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tsName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcStartTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>testExecUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1qaKRu5ItvQSzL1qpzK3WLcLrqzOLwQAzwRfoZwr8rIA'</initValue>
+      <name>testExecSPRId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qa'</initValue>
+      <name>testExecSheetName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'AI_VST_PRO'</initValue>
+      <name>vstProjectPro</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katone_app_huydao'</initValue>
+      <name>dbKatoneUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'kit_app_huydao'</initValue>
+      <name>dbKitUser</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qa-katone-katone-aurora-postgresql14-db-cluster.cluster-c37ymbs5r7nc.us-east-1.rds.amazonaws.com'</initValue>
+      <name>dbServer</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'5432'</initValue>
+      <name>dbPort</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'rGmf44YESBtjo9k/OkOsJw=='</initValue>
+      <name>dbKitPwd</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'IIFWVKFLhLrCfwLutpew0g=='</initValue>
+      <name>dbKatonePwd</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>responseId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'73'</initValue>
+      <name>ai_orgId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://katalon-api.staging.katalon.com/v1/e2etg\n'</initValue>
+      <name>autonomousAPI</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
