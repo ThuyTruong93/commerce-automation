@@ -12,15 +12,16 @@ public class BillingStudioTable extends BaseTable<BillingStudioTable> {
 	}
 
 	public BillingStudioTable selectStudioSubscription(Number accountId) {
-		def selectScript = "select * from billing.studio_subscriptions ats2 where ats2.accountid  = $accountId;"
+//		def selectScript = "select *\
+//				from billing.studio_subscriptions ats2 where ats2.accountid  = $accountId;"
 
-		//def values = executeSelect("accountid = $accountId","accountid")
+		def values = executeSelect("accountid = $accountId","accountid")
 		println "$dbName"
 		println "$table"
-		//executeSelect(dbName,table,"accountid = $accountId","accountid")
-		
-		def value = execute(selectScript)
-		println "value: $value"
+		executeSelect(dbName,table,"accountid = $accountId","accountid")
+
+		//def values = quickExecute(selectScript)
+		println "value: $values"
 		return this
 	}
 }

@@ -1,5 +1,7 @@
 package katalon.services
 import katalon.utility.CommonUtility
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObjectProperty
 
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import katalon.fw.db.PostgreSql
@@ -16,7 +18,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String listActiveSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"accounts/code-organization-"
 	static String subscriptionRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions"
 	static String subscriptionUpdateRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
-
+	static String updateQuotaOrgLevelUrl = "$GlobalVariable.adminApiUrl/public/quota"	
 
 	//	Number accountId;
 	//	String planId;
@@ -289,6 +291,29 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 		return this
 	}
+	
+	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
+		def body = [ "feature": "$feature", "quota": quota, "expiry_date": "$expiryDate",
+					"machine_quota_factor": machineQuotaFactor]
+
+		initRequestObject()
+				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPutRequest()
+				.verifyStatusCode(200)
+
+		return this
+	}
+	
+	public SubscriptionService setFeatureParam(String feature) {
+		List<TestObjectProperty> parameters = new ArrayList<>()
+		parameters.add(new TestObjectProperty('feature', ConditionType.EQUALS, feature))
+		setParam(parameters)
+		return this
+	}
 
 	public postCreateNewSubscriptionRecurly(Object body){
 		initRequestObject()
@@ -307,6 +332,11 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		def result = planId.substring(0, lastIndex)
 		println result
 		return result
+	}
+	
+	public sleepALittleTime() {
+		WebUI.delay(GlobalVariable.smallSleepTime)
+		return this
 	}
 
 }

@@ -46,6 +46,14 @@ public class BaseTable <T> {
 		return this;
 	}
 
+	def T quickExecute(String query) {
+
+		postgreSql.openConnection(dbName)
+		postgreSql.execute(query)
+
+		return this;
+	}
+	
 	def T execute(String queryFile, String... param) {
 		String queryFileContent = Page.nav(FileHelper).readFile(queryFile)
 		String queryStatment = String.format(queryFileContent, param)

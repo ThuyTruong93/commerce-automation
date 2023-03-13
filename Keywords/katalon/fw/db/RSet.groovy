@@ -61,9 +61,12 @@ public class RSet {
 	 * @return a value       - A String datatype
 	 */
 	public getSingleCellValue(ResultSet rs, int rowIndex, String columnName)throws SQLException{
-		rs.absolute(rowIndex)
-		return rs.getString(columnName)
+		if (rs.next()) {
+			return rs.getString(columnName)
+		}
+		return null
 	}
+	
 
 	/**
 	 * Return total of rows from a provided result set

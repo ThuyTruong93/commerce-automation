@@ -13,5 +13,6 @@ Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken
 
 Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .terminateListSubscription()
+							 .sleepALittleTime()
 					 							 
 Page.nav(SubscriptionService).createListNewSubscriptionByUIAPI(accountId, planId, quantity)

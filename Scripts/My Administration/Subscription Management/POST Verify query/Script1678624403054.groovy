@@ -15,6 +15,7 @@ Page.nav(LoginService).login(email, decryptedPwd).verifyStatusCode(200).getToken
 
 Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .terminateListSubscription()
+							 .sleepALittleTime()
 							 .createNewSubscription(accountId, planId, quantity)					 
 							 
 Page.nav(BillingStudioTable).selectStudioSubscription(accountId)
