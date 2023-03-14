@@ -17,6 +17,7 @@ Page.nav(SubscriptionService).getListActiveSubscription(accountId)
 							 .terminateListSubscription()
 							 .sleepALittleTime()
 							 .createNewSubscription(accountId, planId, quantity)					 
-							 
-Page.nav(BillingStudioTable).selectStudioSubscription(accountId)
-										
+					 							 
+def dataQuery = Page.nav(BillingStudioTable).selectStudioSubscription(accountId)
+		
+Page.nav(SubscriptionService).verifyCreateSubscriptionSuccessfully(accountId, dataQuery)

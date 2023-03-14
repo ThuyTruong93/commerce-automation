@@ -24,13 +24,13 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	//	String planId;
 	//	Number number;
 
-	//respond subscription
+	//response subscription
 	Number id;
-	Number createdAt;
-	Number updatedAt;
+	Number createdAt
+	Number updatedAt
 	boolean archived
 	String recurlySubscriptionId
-	String recurlySubscriptionUuid;
+	String recurlySubscriptionUuid
 	boolean unpaid
 	String status
 	Number stripeCustomerId
@@ -73,6 +73,8 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.sendPostRequest()
 				.verifyStatusCode(200)
 
+		reponseSubscriptionUIAPIJson(parseResponseBodyToJsonObject())
+		
 		return this
 	}
 
@@ -91,11 +93,12 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 				def body = [[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]]
 				initRequestObject()
+						//.sleepMiddleTime()
 						.setUrl(subscriptionUrl)
 						.setBearerAuthorizationHeader()
 						.setJsonContentTypeHeader()
 						.setPayLoad(parseObjectToString(body))
-						.sendPostRequest()
+						.sendPostRequest()						
 						.verifyStatusCode(200)
 
 				markPaidInvoiceSubscriptionByInvoiceNumber(parseResponseBodyToJsonObject().data.recurlyInvoiceNumber)
@@ -196,7 +199,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 
-	public updateSubscriptionJson(Object result) {
+	public reponseSubscriptionUIAPIJson(Object result) {
 		this.id = result.id
 		this.createdAt = result.createdAt
 		this.updatedAt = result.updatedAt
@@ -255,6 +258,18 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		}
 		return this
 	}
+	
+	public postCreateNewSubscriptionRecurly(Object body){
+		initRequestObject()
+				.setUrl(subscriptionRecurlyUrl)
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setJsonContentTypeHeader()
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.setPayLoad(parseObjectToString(body))
+				.sendPostRequest()
+				.verifyStatusCode(201)
+		return this
+	}
 
 	public SubscriptionService updateNextBillingDate(String next_bill_date, String recurlySubscriptionUuid) {
 		def body = ["next_bill_date": next_bill_date]
@@ -292,38 +307,33 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		return this
 	}
 	
-	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
-		def body = [ "feature": "$feature", "quota": quota, "expiry_date": "$expiryDate",
-					"machine_quota_factor": machineQuotaFactor]
-
-		initRequestObject()
-				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
-				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-				.setJsonContentTypeHeader()
-				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-				.setPayLoad(parseObjectToString(body))
-				.sendPutRequest()
-				.verifyStatusCode(200)
-
-		return this
+	public SubscriptionService verifyCreateSubscriptionSuccessfully(Number accountId, Object dataQuery) {
+		
+		def data = parseObjectToString(dataQuery)
+		println "data after parse: $data"
+		WebUI.verifyEqual(dataQuery, [accountId, nextBillingDate, "KSE_PER_USER", recurlySubscriptionId, status])
 	}
+	
+//	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
+//		def body = [ "feature": "$feature", "quota": quota, "expiry_date": "$expiryDate",
+//					"machine_quota_factor": machineQuotaFactor]
+//
+//		initRequestObject()
+//				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+//				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+//				.setJsonContentTypeHeader()
+//				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+//				.setPayLoad(parseObjectToString(body))
+//				.sendPutRequest()
+//				.verifyStatusCode(200)
+//
+//		return this
+//	}
 	
 	public SubscriptionService setFeatureParam(String feature) {
 		List<TestObjectProperty> parameters = new ArrayList<>()
 		parameters.add(new TestObjectProperty('feature', ConditionType.EQUALS, feature))
 		setParam(parameters)
-		return this
-	}
-
-	public postCreateNewSubscriptionRecurly(Object body){
-		initRequestObject()
-				.setUrl(subscriptionRecurlyUrl)
-				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-				.setJsonContentTypeHeader()
-				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-				.setPayLoad(parseObjectToString(body))
-				.sendPostRequest()
-				.verifyStatusCode(201)
 		return this
 	}
 
@@ -336,6 +346,11 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	
 	public sleepALittleTime() {
 		WebUI.delay(GlobalVariable.smallSleepTime)
+		return this
+	}
+	
+	public sleepMiddleTime() {
+		WebUI.delay(10)
 		return this
 	}
 
