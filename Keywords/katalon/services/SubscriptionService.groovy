@@ -1,13 +1,12 @@
 package katalon.services
-import katalon.utility.CommonUtility
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.testobject.TestObjectProperty
-
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import katalon.fw.db.PostgreSql
-import katalon.fw.lib.BaseTable
+
+import groovy.json.JsonSlurper
 import internal.GlobalVariable
 import katalon.fw.lib.BaseService
+import katalon.utility.CommonUtility
 
 public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String subscriptionUrl = "$GlobalVariable.myApi$GlobalVariable.version/subscriptions/checkout-testops-platform"
@@ -308,10 +307,21 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	}
 	
 	public SubscriptionService verifyCreateSubscriptionSuccessfully(Number accountId, Object dataQuery) {
-		
-		def data = parseObjectToString(dataQuery)
+		def jsonString = parseObjectToString(dataQuery)
+		def jsonSlurper = new JsonSlurper()
+		def data = jsonSlurper.parseText(jsonString)
 		println "data after parse: $data"
-		WebUI.verifyEqual(dataQuery, [accountId, nextBillingDate, "KSE_PER_USER", recurlySubscriptionId, status])
+		
+		def accountidDB = data.accountid
+		def expirydateDB = data.expirydate
+		def featureDB = data.feature
+		def recurlysubscriptionidDB = data.recurlysubscriptionid
+		def statusDB = data.status
+		
+		def arrayQuery = [accountidDB, expirydateDB, featureDB, recurlysubscriptionidDB, statusDB]
+		
+		println "data accountid after parse: $accountidDB"
+		WebUI.verifyEqual(arrayQuery, [accountId, nextBillingDate, "KSE_PER_USER", recurlySubscriptionId, status])
 	}
 	
 //	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
