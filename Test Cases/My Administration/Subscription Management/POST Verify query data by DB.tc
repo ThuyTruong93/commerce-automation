@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>POST Verify query</name>
+   <name>POST Verify query data by DB</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>41d92f9c-61e1-4bd6-9056-732d06ee943b</testCaseGuid>

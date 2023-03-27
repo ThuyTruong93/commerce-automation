@@ -9,7 +9,8 @@ public class BillingStudioTable extends BaseTable<BillingStudioTable> {
 
 	private BillingStudioTable() {
 		dbName = "katone"
-		table = "billing.studio_subscriptions ats2 inner join billing.recurly_subscriptions x on ats2.recurlysubscriptionid =x.id"				
+		table = "billing.studio_subscriptions"	
+		//table = "billing.studio_subscriptions ats2 inner join billing.recurly_subscriptions x on ats2.recurlysubscriptionid =x.id"
 	}
 	
 	String accountid
