@@ -14,6 +14,15 @@
       </iterationEntity>
       <testDataId>Data Files/My Administration/Subscription Management/New Subscription on Recurly</testDataId>
    </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>796fa1b7-c82e-4b8c-9463-9e24681477fd</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/My Administration/Subscription Management/Subscription Auto Renew</testDataId>
+   </testDataLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
