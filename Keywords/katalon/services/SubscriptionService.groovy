@@ -17,7 +17,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 	static String listActiveSubscriptionUrl = "$GlobalVariable.recurlyUrl"+"accounts/code-organization-"
 	static String subscriptionRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions"
 	static String subscriptionUpdateRecurlyUrl = "$GlobalVariable.recurlyUrl"+"subscriptions/uuid-"
-	static String updateQuotaOrgLevelUrl = "$GlobalVariable.adminApiUrl/public/quota"	
+	static String updateQuotaOrgLevelUrl = "$GlobalVariable.adminApiUrl/public/quota"
 
 	//	Number accountId;
 	//	String planId;
@@ -63,7 +63,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService createNewSubscription(Number accountId, String planId, Number quantity) {
 
-		def body = [[ "organizationId": accountId,"planId": planId, "number": quantity]]
+		def body = [
+			[ "organizationId": accountId,"planId": planId, "number": quantity]
+		]
 		initRequestObject()
 				.setUrl(subscriptionUrl)
 				.setBearerAuthorizationHeader()
@@ -73,7 +75,7 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				.verifyStatusCode(200)
 
 		reponseSubscriptionUIAPIJson(parseResponseBodyToJsonObject())
-		
+
 		return this
 	}
 
@@ -90,14 +92,16 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 				println planIdArray[i]
 				println quantityArray[i]
 
-				def body = [[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]]
+				def body = [
+					[ "organizationId": accountId,"planId": planIdArray[i], "number": quantityArray[i]]
+				]
 				initRequestObject()
 						//.sleepMiddleTime()
 						.setUrl(subscriptionUrl)
 						.setBearerAuthorizationHeader()
 						.setJsonContentTypeHeader()
 						.setPayLoad(parseObjectToString(body))
-						.sendPostRequest()						
+						.sendPostRequest()
 						.verifyStatusCode(200)
 
 				markPaidInvoiceSubscriptionByInvoiceNumber(parseResponseBodyToJsonObject().data.recurlyInvoiceNumber)
@@ -135,7 +139,9 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	public SubscriptionService upgradeSubscription(Number accountId,String planId,Number quantity, String recurlySubscriptionUuid) {
 		def quantityUpgrade = quantity + 1
-		def body = [[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]]
+		def body = [
+			[ "organizationId": accountId,"planId": planId, "number": quantityUpgrade, "recurlySubscriptionUuid": recurlySubscriptionUuid]
+		]
 
 		initRequestObject()
 				.setUrl(subscriptionUrl)
@@ -236,28 +242,34 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 			case 'testops_platform':
 				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-					"quantity": 1,"add_ons": [["code": "testops_platform_test_results","quantity": quantity]]]
+					"quantity": 1,"add_ons": [
+						["code": "testops_platform_test_results","quantity": quantity]
+					]]
 				println "body in switch cases: $body"
 				postCreateNewSubscriptionRecurly(body)
 				break
 
 			case 'testcloud_session_web':
 				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-					"quantity": 1,"add_ons": [["code": "testcloud_web_sessions","quantity": quantity]]]
+					"quantity": 1,"add_ons": [
+						["code": "testcloud_web_sessions","quantity": quantity]
+					]]
 				println "body in switch cases: $body"
 				postCreateNewSubscriptionRecurly(body)
 				break
 
 			case 'visual_testing_pro':
 				body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
-					"quantity": 1,"add_ons": [["code": "visual_testing_checkpoints","quantity": quantity]]]
+					"quantity": 1,"add_ons": [
+						["code": "visual_testing_checkpoints","quantity": quantity]
+					]]
 				println "body in switch cases: $body"
 				postCreateNewSubscriptionRecurly(body)
 				break
 		}
 		return this
 	}
-	
+
 	public postCreateNewSubscriptionRecurly(Object body){
 		initRequestObject()
 				.setUrl(subscriptionRecurlyUrl)
@@ -305,41 +317,53 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 		return this
 	}
-	
+
 	public SubscriptionService verifyCreateSubscriptionSuccessfully(Number accountId, Object dataQuery) {
 		def jsonString = parseObjectToString(dataQuery)
 		def jsonSlurper = new JsonSlurper()
 		def data = jsonSlurper.parseText(jsonString)
 		println "data after parse: $data"
-		
+
 		def accountidDB = data.accountid
 		def expirydateDB = data.expirydate
 		def featureDB = data.feature
 		def recurlysubscriptionidDB = data.recurlysubscriptionid
 		def statusDB = data.status
-		
-		def arrayQuery = [accountidDB, expirydateDB, featureDB, recurlysubscriptionidDB, statusDB]
-		
+
+		def arrayQuery = [
+			accountidDB,
+			expirydateDB,
+			featureDB,
+			recurlysubscriptionidDB,
+			statusDB
+		]
+
 		println "data accountid after parse: $accountidDB"
-		WebUI.verifyEqual(arrayQuery, [accountId, nextBillingDate, "KSE_PER_USER", recurlySubscriptionId, status])
+		WebUI.verifyEqual(arrayQuery, [
+			accountId,
+			nextBillingDate,
+			"KSE_PER_USER",
+			recurlySubscriptionId,
+			status
+		])
 	}
-	
-//	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
-//		def body = [ "feature": "$feature", "quota": quota, "expiry_date": "$expiryDate",
-//					"machine_quota_factor": machineQuotaFactor]
-//
-//		initRequestObject()
-//				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
-//				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
-//				.setJsonContentTypeHeader()
-//				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
-//				.setPayLoad(parseObjectToString(body))
-//				.sendPutRequest()
-//				.verifyStatusCode(200)
-//
-//		return this
-//	}
-	
+
+	//	public SubscriptionService updateQuotaOldProduct(String feature, Number quota, String expiryDate, Number machineQuotaFactor) {
+	//		def body = [ "feature": "$feature", "quota": quota, "expiry_date": "$expiryDate",
+	//					"machine_quota_factor": machineQuotaFactor]
+	//
+	//		initRequestObject()
+	//				.setUrl(subscriptionUpdateRecurlyUrl+recurlySubscriptionUuid)
+	//				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+	//				.setJsonContentTypeHeader()
+	//				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+	//				.setPayLoad(parseObjectToString(body))
+	//				.sendPutRequest()
+	//				.verifyStatusCode(200)
+	//
+	//		return this
+	//	}
+
 	public SubscriptionService setFeatureParam(String feature) {
 		List<TestObjectProperty> parameters = new ArrayList<>()
 		parameters.add(new TestObjectProperty('feature', ConditionType.EQUALS, feature))
@@ -353,12 +377,12 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 		println result
 		return result
 	}
-	
+
 	public sleepALittleTime() {
 		WebUI.delay(GlobalVariable.smallSleepTime)
 		return this
 	}
-	
+
 	public sleepMiddleTime() {
 		WebUI.delay(10)
 		return this
