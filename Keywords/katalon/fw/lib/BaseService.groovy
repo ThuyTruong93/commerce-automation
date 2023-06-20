@@ -1,5 +1,7 @@
 package katalon.fw.lib
 
+import org.codehaus.groovy.runtime.GStringImpl
+
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.ConditionType
@@ -10,6 +12,7 @@ import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.impl.HttpFileBodyContent
 import com.kms.katalon.core.testobject.impl.HttpFormDataBodyContent
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.common.RestfulClient
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.util.CryptoUtil
@@ -17,17 +20,20 @@ import com.kms.katalon.util.CryptoUtil
 import groovy.json.JsonOutput
 import groovy.json.JsonSlurper
 import internal.GlobalVariable
+import katalon.enums.BodyType
+import katalon.model.WSRequest
 import ro.skyah.comparator.CompareMode
 import ro.skyah.comparator.JSONCompare
 
 public class BaseService <T> {
 
-	RequestObject request;
-	ResponseObject response;
-	ArrayList httpHeader;
-	String createUrl;
-	String deleteUrl;
-	String updateUrl;
+	RequestObject request
+	ResponseObject response
+	ArrayList httpHeader
+	String createUrl
+	String deleteUrl
+	String updateUrl
+	String getUrl
 
 
 	def T initRequestObject() {
@@ -80,8 +86,32 @@ public class BaseService <T> {
 		return this
 	}
 
+	def T setOctetStreamContentTypeHeader() {
+		httpHeader.add(new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'application/octet-stream'))
+		return this
+	}
+
 	def T setHeader(String headerName, String headerValue) {
 		httpHeader.add(new TestObjectProperty(headerName, ConditionType.EQUALS, headerValue))
+		return this
+	}
+
+	def T setHearders(List<Object> headers) {
+		if(headers != null && headers.size() > 0) {
+			for(Object header in headers) {
+				setHeader(header[0], header[1])
+			}
+		}
+		return this
+	}
+
+	def T setHeaders(Map<String, String> headers) {
+		if (headers != null) {
+			headers.each { key, value ->
+				setHeader(key, value)
+			}
+		}
+
 		return this
 	}
 
@@ -96,8 +126,16 @@ public class BaseService <T> {
 	}
 
 	def T setPayLoad(Object payload) {
-		String payloadStr = payload instanceof String ? payload : parseObjectToString(payload)
-		request.setBodyContent(new HttpTextBodyContent(payloadStr))
+		if(payload != null) {
+			String payloadStr = payload instanceof GStringImpl || payload instanceof String ? payload : parseObjectToString(payload)
+			request.setBodyContent(new HttpTextBodyContent(payloadStr.replaceAll("[\\t|\\r|\\n|\\r\\n]", "")))
+		}
+		return this
+	}
+
+
+	def T setPayLoadWithFile(String filePath) {
+		request.setBodyContent(new HttpFileBodyContent(filePath))
 		return this
 	}
 
@@ -107,8 +145,22 @@ public class BaseService <T> {
 	}
 
 	def T setParam(List<TestObjectProperty> params) {
-		request.setRestParameters(params)
-		RestfulClient.processRequestParams(request)
+		if (params != null) {
+			request.setRestParameters(params)
+			RestfulClient.processRequestParams(request)
+		}
+		return this
+	}
+
+	def T setParams(Map<String, String> params) {
+		if (params != null) {
+			List<TestObjectProperty> p = []
+			params.each { key, value ->
+				p.add(new TestObjectProperty(key, ConditionType.EQUALS, value))
+			}
+			setParam(p)
+		}
+
 		return this
 	}
 
@@ -145,6 +197,15 @@ public class BaseService <T> {
 		return this
 	}
 
+	def T verifyPropertyValue(String propertyPath, def value) {
+		WS.verifyElementPropertyValue(response, propertyPath, value)
+		return this
+	}
+
+	def getPropertyValue(String propertyPath) {
+		return WS.getElementPropertyValue(response, propertyPath)
+	}
+
 	def int getResponseStatusCode() {
 		return response.getStatusCode()
 	}
@@ -161,9 +222,15 @@ public class BaseService <T> {
 		return this
 	}
 
+	def T verifyJSONResponseBodyExactEqual(String expected) {
+		verifyJSONResponseBodyEqual(expected, CompareMode.JSON_ARRAY_NON_EXTENSIBLE, CompareMode.JSON_OBJECT_NON_EXTENSIBLE)
+		return this
+	}
+
 	def T verifyContentIsNull () {
 		boolean check = parseResponseBodyToJsonObject().content == null || parseResponseBodyToJsonObject().content == []
 		WS.verifyEqual(check, true)
+
 		return this
 	}
 
@@ -186,52 +253,108 @@ public class BaseService <T> {
 		return this
 	}
 
-	def T create(String url,Object payload) {
+	def T create(Object payload, String url=createUrl, List<Object> headers = null, int statusCode = 200) {
 		setUrl(url)
-		setPayLoad(payload)
-		sendPostRequest()
-		verifyStatusCode(200)
-		return this
-	}
-
-	def T create(Object payload) {
-		setUrl(createUrl)
+		setHearders(headers)
 		setJsonContentTypeHeader()
 		setPayLoad(payload)
 		sendPostRequest()
-		verifyStatusCode(200)
-		if(parseResponseBodyToJsonObject().data != null) {
-			GlobalVariable.responseId = parseResponseBodyToJsonObject().data.id
+		verifyStatusCode(statusCode)
+		return this
+	}
+
+	def T create(WSRequest req) {
+		setUrl(req.url)
+		setHeaders(req.headers)
+		setParams(req.params)
+		switch (req.bodyType) {
+			case BodyType.JSON:
+				setJsonContentTypeHeader()
+				setPayLoad(req.payload)
+				break
+
+			case BodyType.FORM_DATA:
+				setFormDataContentTypeHeader()
+				setFormDataPayLoad(req.payload)
+				break
+
+			default:
+				KeywordUtil.markFailedAndStop('This body type is not supported yet')
 		}
+		sendPostRequest()
+		verifyStatusCode(req.statusCode)
 		return this
 	}
 
-	def T createWithoutStatusCheck(Object payload) {
-		setUrl(createUrl)
+	def T createWithParam(String url, List<Object> headers = null, List<TestObjectProperty> params) {
+		setUrl(url)
+		setHearders(headers)
+		setJsonContentTypeHeader()
+		setParam(params)
+		sendPostRequest()
+
+		return this
+	}
+
+
+	def T createWithoutStatusCheck(Object payload, String url = createUrl, List<Object> headers = null) {
+		setUrl(url)
+		setHearders(headers)
 		setJsonContentTypeHeader()
 		setPayLoad(payload)
 		sendPostRequest()
 		return this
 	}
 
-	def T update(String url,Object payload) {
-		setUrl(updateUrl)
+	def T update(Object payload, String url = updateUrl, List<Object> headers = null, int statusCode = 200) {
+		setUrl(url)
+		setHearders(headers)
+		setJsonContentTypeHeader()
 		setPayLoad(payload)
 		sendPutRequest()
-		verifyStatusCode(200)
+		verifyStatusCode(statusCode)
 		return this
 	}
 
-	def T deleteWithoutStatusCheck() {
-		setUrl(deleteUrl)
+	def T updateWithoutStatusCheck(Object payload, String url = updateUrl, List<Object> headers = null) {
+		setUrl(url)
+		setHearders(headers)
+		setJsonContentTypeHeader()
+		setPayLoad(payload)
+		sendPutRequest()
+		return this
+	}
+
+	def T delete(String url = deleteUrl, List<Object> headers = null, int statusCode = 200) {
+		setUrl(url)
+		setHearders(headers)
+		sendDeleteRequest()
+		verifyStatusCode(statusCode)
+		return this
+	}
+
+	def T deleteWithoutStatusCheck(String url = deleteUrl, List<Object> headers = null) {
+		setUrl(url)
+		setHearders(headers)
 		sendDeleteRequest()
 		return this
 	}
 
-	def T delete() {
-		setUrl(deleteUrl)
-		sendDeleteRequest()
-		verifyStatusCode(200)
+	def T get(String url = getUrl, List<Object> headers = null, List<Object> params = null, int statusCode = 200) {
+		setUrl(url)
+		setHearders(headers)
+		setParam(params)
+		sendGetRequest()
+		verifyStatusCode(statusCode)
+		return this
+	}
+
+	def T get(WSRequest req) {
+		setUrl(req.url)
+		setHeaders(req.headers)
+		setParams(req.params)
+		sendGetRequest()
+		verifyStatusCode(req.statusCode)
 		return this
 	}
 }

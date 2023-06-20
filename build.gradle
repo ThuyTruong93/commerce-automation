@@ -9,4 +9,5 @@ repositories {
 
 dependencies {
   implementation 'com.github.fslev:json-compare:2.21'
+  testCompile 'com.icegreen:greenmail:1.5.9'
 }

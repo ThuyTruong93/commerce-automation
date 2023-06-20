@@ -3,7 +3,7 @@
    <description></description>
    <name>staging</name>
    <tag></tag>
-   <defaultProfile>true</defaultProfile>
+   <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
       <initValue>40</initValue>
@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QEAutomationKatalon@gmail.com'</initValue>
+      <initValue>'qeautomationkatalon@gmail.com'</initValue>
       <name>owner_mail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -36,12 +36,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://my2.staging.katalon.com/'</initValue>
+      <initValue>'https://my.staging.katalon.com/'</initValue>
       <name>myUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://api2.staging.katalon.com/'</initValue>
+      <initValue>'https://api.staging.katalon.com/'</initValue>
       <name>myApi</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,6 +76,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'Katalon on Katalon'</initValue>
+      <name>defaultOrgName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'1939127'</initValue>
       <name>defaultAccount</name>
    </GlobalVariableEntity>
@@ -93,21 +98,6 @@
       <description></description>
       <initValue>'262587'</initValue>
       <name>turingAndGryffindoorTeamId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'262830'</initValue>
-      <name>cloudianTeamId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'375340'</initValue>
-      <name>cloudBasedExecProjectId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'375813'</initValue>
-      <name>cloudBasedExecWOTunnelActiveProjectId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -173,11 +163,6 @@
       <description></description>
       <initValue>''</initValue>
       <name>visualTestUrl</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'QA'</initValue>
-      <name>ownerAbbrName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -293,5 +278,60 @@
       <description></description>
       <initValue>'application/vnd.recurly.v2021-02-25'</initValue>
       <name>acceptNameRecurly</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://qeautomationkatalon.atlassian.net/'</initValue>
+      <name>jiraWorkspaceUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'jsd.portal.language.anonymous=en-US; ajs_anonymous_id=%22574f68db-2f18-40bd-8fcc-bf58c7fbffff%22; atlassian.xsrf.token=ca8998ab-99e4-4850-8154-b5f34f0645b7_e0a2fd836e2fd92ef63c7dbc7d1cd61e66711f74_lin; cloud.session.token=eyJraWQiOiJzZXNzaW9uLXNlcnZpY2VcL3Byb2QtMTU5Mjg1ODM5NCIsImFsZyI6IlJTMjU2In0.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2MzliZjFhOTJhYWMzODlkMDJjMjk5MWEiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNjgwMjMyMjQ1LCJyZWZyZXNoVGltZW91dCI6MTY4MjE1MTA3MiwidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6ImY1NzdmMTA4LTQ4MzYtNDYyNy05MjE5LTEyYTA4ZTBlOWY5YyIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE2ODIxNTA0NzIsImV4cCI6MTY4NDc0MjQ3MiwiaWF0IjoxNjgyMTUwNDcyLCJlbWFpbCI6InFlYXV0b21hdGlvbmthdGFsb25AZ21haWwuY29tIiwianRpIjoiZjU3N2YxMDgtNDgzNi00NjI3LTkyMTktMTJhMDhlMGU5ZjljIn0.hX_ydbn9AlylvfylEl2uouF2NE-z66okV613RyWclv5b3wc_LC4tkeoiZAswa40E9PKrB3rTA4gVSgMIxOfy317c8esyeKrTNW3-I2eJpER50w_SsoED8rgDrUnf_KbHRr1VIAhl4HNc1obqgXjigyB4zZwg3dJgdRaycWYqH9VmfLYYKgmz1itL331WUFgJLqAOg-W9gED6RTnLrwqH7HSQV_EtJOAcDIzRBcQUpFmXnNP-9ZmKHbCHh80jvR0qE7jGlCum0uSu-0kJP8qLJn7pJpFxG7ZYTF3fkfVS9cW-tVde3q6Nvw7dsTbi4_vOhm-E7Ky2Mvx9ODaRNLOdTg; tenant.session.token=eyJraWQiOiJzZXNzaW9uLXNlcnZpY2VcL3Byb2QtMTU5Mjg1ODM5NCIsImFsZyI6IlJTMjU2In0.eyJhc3NvY2lhdGlvbnMiOltdLCJzdWIiOiI2MzliZjFhOTJhYWMzODlkMDJjMjk5MWEiLCJlbWFpbERvbWFpbiI6ImdtYWlsLmNvbSIsImltcGVyc29uYXRpb24iOltdLCJjcmVhdGVkIjoxNjgwMjMyMjQ1LCJyZWZyZXNoVGltZW91dCI6MTY4MjE1MTA3NiwidmVyaWZpZWQiOnRydWUsImlzcyI6InNlc3Npb24tc2VydmljZSIsInNlc3Npb25JZCI6ImY1NzdmMTA4LTQ4MzYtNDYyNy05MjE5LTEyYTA4ZTBlOWY5YyIsInN0ZXBVcHMiOltdLCJhdWQiOiJhdGxhc3NpYW4iLCJuYmYiOjE2ODIxNTA0NzYsImV4cCI6MTY4NDc0MjQ3NiwiaWF0IjoxNjgyMTUwNDc2LCJlbWFpbCI6InFlYXV0b21hdGlvbmthdGFsb25AZ21haWwuY29tIiwianRpIjoiZjU3N2YxMDgtNDgzNi00NjI3LTkyMTktMTJhMDhlMGU5ZjljIn0.Hslk4XHGsfASwUrpJf44x-MkVPkN-L15DL7h8exfLl1rqkvOTKk9qGofb6NETgSMzVRRweZDUMqKwxa0JEvoyNuNHhet7gdkAslPr58AHJs7QGx2OdRwGD5IIJiUdHdMbsgqYGtm1TJ4giI6wGNKWfLTsdgoA-x7SdJZpSClzex0_x1kQJ1V-J-m6FHIxUXNC20KiZMSAVUrxK5TRv52GZVsKhv_qDxPcPbFkjCwnecd3GlPbqPeiUB5MtCL1Afrs2cw3fVB3Lc456zL2hMKoRRiAsj4R6k7wt_xDViKuQzGtLyIuXtsQbhqrGWjrIw3OHtNd3usjI-8pdLyfZOzUA; JSESSIONID=2DD799FA46C35ACD0F45796C5AE5DADC'</initValue>
+      <name>jiraCookie</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ATATT3xFfGF0jjre11x0mfHKeQQAJRhkIpNnw5k89GQ2nCbQuP8PUsezdHwVMDQSawtTBJQn8nkhYfIdKdRErSVYdEdIgCbKHi5Ry_0KN47IEQR_hiT3qoMsFDO0xUAIjfYbxBKpXKfwOaySfznjfchh8O1iCWnsO8kLGHJK-Nl9naJB4UV6TKw=155B6967'</initValue>
+      <name>jiraApiToken</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10010</initValue>
+      <name>externalProjectId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'DEFAULT'</initValue>
+      <name>externalProjectKey</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://testcloud-s3-test-project-storage-staging.s3.amazonaws.com/'</initValue>
+      <name>tcS3StorageUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcSessionId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcSessionStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcSignedUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>tcStoragePath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>findTestData('Credentials/staging')</initValue>
+      <name>credentialDataFile</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

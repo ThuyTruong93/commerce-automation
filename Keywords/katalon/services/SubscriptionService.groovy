@@ -223,6 +223,41 @@ public class SubscriptionService extends BaseService<SubscriptionService> {
 
 	//Subscription on Recurly
 
+	public SubscriptionService createSubscription(Number accountId, String planId, Number quantity) {
+		def body = ["plan_code": planId, "currency": "USD","account": ["code": "organization-$accountId"], "collection_method": "manual",
+			"quantity": quantity]
+
+		switch(getSubscriptionName(planId).toString())
+		{
+			case 'testops_platform':
+				body.quantity = 1
+				body.add_ons = [
+					["code": "testops_platform_test_results","quantity": quantity]
+				]
+				break
+
+			case 'testcloud_session_web':
+				body.quantity = 1
+				body.add_ons = [
+					["code": "testcloud_web_sessions","quantity": quantity]
+				]
+				break
+
+			case 'visual_testing_pro':
+				body.quantity = 1
+				body.add_ons = [
+					["code": "visual_testing_checkpoints","quantity": quantity]
+				]
+				break
+		}
+
+		initRequestObject()
+				.setBasicAuthorizationHeader("$GlobalVariable.apiKeyRecurly", "")
+				.setAcceptHeader(GlobalVariable.acceptNameRecurly)
+				.create(parseObjectToString(body),,201)
+		return this
+	}
+
 	public SubscriptionService createNewSubscriptionRecurly(Number accountId, String planId, Number quantity) {
 
 		def body = []
